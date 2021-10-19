@@ -1,4 +1,5 @@
 # 2ndBook
+Juden
 #Einrichten von Git
 #1. Installieren der Software Git:
 #	Herunterladen von https://git-scm.com/
