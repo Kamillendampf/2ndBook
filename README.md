@@ -13,3 +13,5 @@
 #			git config --gloabal user.email "heri email @ eingeben"
 #
 #Dies ist spaeter wichtig damit mam pull und request verwenden kann.
+
+Test Push
