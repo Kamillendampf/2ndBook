@@ -1,21 +1,21 @@
 # 2ndBook
 
 
-# Einrichten von Git
-# 1. Installieren der Software Git:
-	Herunterladen von https://git-scm.com/
-	waehle hier dein Betriebsystem aus
+# Umgang mit dem Git
+## Hochladen von Dateien:
+Step 1:
+Fuege die Dateien zur stage hinzu.
+	git add Datei.name
+Step 2:
+Fuege ein Git commit hinzu
+	git commit -m "Hier die aenderungs Nachricht"
+step 3:
+die Daten hochladen:
+	git push
+step 4:
+akutalisieren/ muss auch vor arbeitsstart eingegeben werden damit alle Dateine auf dem aktuellen stand sind
+	git pull
 
-# 2. Fuere die Instalationsdatei aus:
-	folge dem gefuehrten pfad
-
-# 3. Authentifizierung:
-# set Username
-			git config --gloabal user.name "Name eingeben hier"
-# set User Email
-			git config --gloabal user.email "heri email @ eingeben"
-
-Dies ist spaeter wichtig damit mam pull und request verwenden kann.
-
-HELLO GUYS!!
-Hallo
+# Uebersicht von veraenderten daten:
+Um zu sehen welche Daten auf dem lokalen Rechner veraendert wurden oder welche zum pushen vorbereitet weuden oder welche nachrichten noch ein Kommit benoetigen.
+	git status
