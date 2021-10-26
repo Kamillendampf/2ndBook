@@ -1,17 +1,25 @@
 body{
-    background-color: floralwhite;
+    background-image: url(../Assets/icons/BackgroundImgPC.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
     width: 100%;
+    height: auto;
     margin: 0 auto;
     padding-left: 0px;
-    padding-top: 20px;                                                  /*Kann man noch anpassen falls der strich ueber der navbar weg soll*/
+    padding-top: 0px;                                                 
     padding-right: 0px;
     padding-bottom: 0px;
 
 }
 
+
+
 /* Der Kasten um die einzelnen Buttons*/
 .navContainer{
+    position: fixed;
     margin: 0 auto;
+    margin-bottom: 100px;
     width: 100%;
     height: 50px;
     background-color:rgb(129, 40, 39);
@@ -19,6 +27,10 @@ body{
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* Der Kreis fuer das logo*/
@@ -27,21 +39,29 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    background-color: rgb(129, 40, 39);
+   background-color: rgb(129, 40, 39);
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
 }
+.circleLogo{
+ 
+    object-fit: cover;
+}
+
 
 /*Listen Elemente*/
 .navList{
+    
     margin: 0 auto;
     list-style-type: none;
     padding-left: 0px;
     padding-top: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-    overflow: hidden
-    /*width: 100%;
-    height: 50px;*/
+    width: 100%;
+    height: 50px;
 }
 .navElement{
     float: left;
@@ -55,6 +75,7 @@ body{
 }
 
 #left{
+    padding-top: 10px;
     float: left;
     text-align: center;
     width: 9%;
@@ -69,6 +90,7 @@ body{
 
 }
 #right{
+    padding-top: 10px;
     float: right;
     text-align: center;
     width: 9%;
@@ -82,6 +104,7 @@ body{
   
 }
 #navText{
+    padding-top: 10px;
     float: left;
     text-align: center;
     width: 30.8%;
@@ -93,35 +116,156 @@ body{
     width: 20%;
 }
 
-.iconNav{
+
+
+
+/* Dropdown Menue*/
+
+.dropdownMenue{
+    display: block;
+    margin-top: 100px;
+    width: 200px;
+    height: 100px;
+    background-color: whitesmoke;
+}
+
+
+/*Artikel*/
+.koerper{
+    margin-bottom: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: auto;
+     padding-left: 0px;
+     padding-top: 0px;                                                 
+     padding-right: 0px;
+     padding-bottom: 0px;
+ }
+.artikel{
+    width: 400px;
+    height: 600px;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* DropDown Menue left*/
-.dropdownMenue{
-    position: relative;
-    display: inline-block;
-}
-.dropdownContent{
-    display: none;
-    position: absolute;
-    background-color: rgb(129, 40, 39);
-    min-width: 500px;
-    height: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-}
-
-.dropdownMenue:hover .dropdownContent{
-    display: block;
-  }
-
-
-
-
-@media screen (){
     
+}
+
+.artikelBild{
+    display: inline-block;
+    width: 200;
+    height: auto;
+}
+
+
+
+
+/* Resposiver Teil */
+
+@media only screen and  (max-width: 900px) {
+    body{
+        background-image: url(../Assets/Background/DSC08788.JPG);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-left: 0px;
+        padding-top: 0px;                                                 
+        padding-right: 0px;
+        padding-bottom: 0px;
+    
+    }
+
+
+}
+
+@media only screen and  (max-width: 500px) {
+    body{
+        background-image: url(../Assets/Background/DSC08788.JPG);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-left: 0px;
+        padding-top: 0px;                                                 
+        padding-right: 0px;
+        padding-bottom: 0px;
+    
+    }
+
+    #navText{
+        padding-top: 15px;
+        float: left;
+        text-align: center;
+        width: 30.8%;
+        font-size: 20px;
+    }
+
+    #right{
+        padding-top: 15px;
+        float: right;
+        text-align: center;
+        width: 9%;
+        background-color: rgb(129, 40, 39);
+        box-sizing: border-box;
+        border: 3px solid whitesmoke;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom:  0px; ;
+        font-size: 20px;
+      
+    }
+
+    #left{
+        padding-top: 15px;
+        float: left;
+        text-align: center;
+        width: 9%;
+        box-sizing: border-box;
+        background-color: rgb(129, 40, 39);
+        border: 3px solid whitesmoke;
+        border-top: 0px;
+        border-left: 0px;
+        border-bottom:  0px; 
+        font-size: 20px;
+      
+    
+    }
+
+
+    /*Artikel*/
+    .koerper{
+        margin-bottom: 25px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         height: auto;
+         padding-left: 0px;
+         padding-top: 0px;                                                 
+         padding-right: 0px;
+         padding-bottom: 0px;
+     }
+    .artikel{
+        width: 200px;
+        height: 300px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .artikelBild{
+        display: inline-block;
+        width: 150;
+        height: auto;
+    }
+
 }
