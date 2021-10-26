@@ -1,4 +1,5 @@
 <html>
+
     <head>
         <!--Bitte drin lassen-->
         <meta charset="UTF-8">                                                                                                      <!-- Festlegen des Verwendeten Zeichenvorrats -->
@@ -9,7 +10,12 @@
         <link rel="icon"  type="image/svg" href="../Assets/icons/Logo_Final.svg">                                                  <!-- Zeit Icon/Logo neben dem Titel an  -->
         <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
         <link rel="stylesheet" href="navbar.css">
-       
+        <link rel="stylesheet" href="dropdown.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+        <script src="dropdown.js"></script>
+        
         <!--    *
                 *
                 *
@@ -22,13 +28,19 @@
 
     </head>
     <body>
-        
             <div class="navContainer">
                 <ol class="navList">
-                    <li class="navElement" id="left">
-                            <i class="icon-th-list" id='iconNav'></i>
+                    <li class="nav" id="left">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn"><i class="icon-th-list"></i></button>
+                            <div id="myDropdown" class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                          </div>
                     </li>
-                    <li class="navElement" id="navText"> 2ndBook</li>
+                    <li class="navElement" id="navText"> 2nd</li>
                     <li class="navElement" id="navCircle"> <div class="circle"><img class="cicrleLogo" src="../Assets/icons/Logo_Final_White_Background.svg"></div></li>
                     <li class="navElement" id="navText"> Book</li>
                     <li class="navElement" id="right"> <i class="icon-user" id="iconNav"></i></li>
@@ -36,40 +48,23 @@
             </div>
            
   
-        <!--
-        <div class="dropdownMenue">
-            <i class="icon-th-list"></i>
-            <div class="dropdownContent"> 
-                <form action=""> <i class="icon-neuter"></i> <input type="text" placeholder="ISBN:"> <input type="button" value="Suchen"> </form>
-            </div>
-        </div>
-    -->
+        
+            
+    
     <div class="koerper">
          <div class="artikel">
             <img src="../GUI/final/Shopingcard_final.png" class="artikelBild">
         </div> 
+        
     </div>
 
-    <div class="koerper">
-        <div class="artikel">
-           <img src="../GUI/final/Shopingcard_final.png" class="artikelBild">
-       </div> 
-   </div>
-   <div class="koerper">
-    <div class="artikel">
-       <img src="../GUI/final/Shopingcard_final.png" class="artikelBild">
-   </div> 
-</div>
-<div class="koerper">
-    <div class="artikel">
-       <img src="../GUI/final/Shopingcard_final.png" class="artikelBild">
-   </div> 
-</div>
+  
           
 
     </body>
     <footer>
 
     </footer>
+
 
 </html>
