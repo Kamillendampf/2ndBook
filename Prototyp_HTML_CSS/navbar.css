@@ -1,6 +1,5 @@
 body{
-    background-image: url(../Assets/icons/BackgroundImgPC.svg);
-    background-repeat: no-repeat;
+    background: url(../Assets/icons/BackgroundImgPC.svg) no-repeat 0 50%;
     background-attachment: fixed;
     background-size:cover;
     width: 100%;
