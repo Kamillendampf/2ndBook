@@ -40,8 +40,8 @@ body{
     padding-right: 0px;
     padding-bottom: 0px;
     overflow: hidden
-    width: 100%;
-    height: 50px;
+    /*width: 100%;
+    height: 50px;*/
 }
 .navElement{
     float: left;
@@ -99,6 +99,29 @@ body{
     align-items: center;
 }
 
-@media screen ({
+/* DropDown Menue left*/
+.dropdownMenue{
+    position: relative;
+    display: inline-block;
+}
+.dropdownContent{
+    display: none;
+    position: absolute;
+    background-color: rgb(129, 40, 39);
+    min-width: 500px;
+    height: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdownMenue:hover .dropdownContent{
+    display: block;
+  }
+
+
+
+
+@media screen (){
     
 }
