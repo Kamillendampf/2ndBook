@@ -1,9 +1,9 @@
 body{
-    background-color: black;
+    background-color: floralwhite;
     width: 100%;
     margin: 0 auto;
     padding-left: 0px;
-    padding-top: 20px;
+    padding-top: 20px;                                                  /*Kann man noch anpassen falls der strich ueber der navbar weg soll*/
     padding-right: 0px;
     padding-bottom: 0px;
 
@@ -56,19 +56,21 @@ body{
 
 #left{
     float: left;
-    text-align: left;
+    text-align: center;
     width: 9%;
     box-sizing: border-box;
     background-color: rgb(129, 40, 39);
     border: 3px solid whitesmoke;
     border-top: 0px;
     border-left: 0px;
-    border-bottom:  0px; ;
+    border-bottom:  0px; 
+    font-size: 30px;
+  
 
 }
 #right{
     float: right;
-    text-align: right;
+    text-align: center;
     width: 9%;
     background-color: rgb(129, 40, 39);
     box-sizing: border-box;
@@ -76,17 +78,25 @@ body{
     border-top: 0px;
     border-right: 0px;
     border-bottom:  0px; ;
+    font-size: 30px;
   
 }
 #navText{
     float: left;
     text-align: center;
     width: 30.8%;
+    font-size: 30px;
 }
 
 #navCircle{
     float: left;
     width: 20%;
+}
+
+.iconNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen ({
