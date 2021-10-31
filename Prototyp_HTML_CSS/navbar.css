@@ -83,39 +83,42 @@ body{
 }
 
 #left{
-    padding-top: 10px;
+    
     float: left;
-    text-align: center;
-    width: 9%;
+    
+    width: 10%;
+    height: 100%;
     box-sizing: border-box;
     background-color: rgb(129, 40, 39);
     border: 3px solid whitesmoke;
     border-top: 0px;
     border-left: 0px;
     border-bottom:  0px; 
-    font-size: 30px;
+    
   
 
 }
 #right{
-    padding-top: 10px;
+    
     float: right;
-    text-align: center;
-    width: 9%;
+
+    width: 10%;
+    height: 100%;
     background-color: rgb(129, 40, 39);
     box-sizing: border-box;
     border: 3px solid whitesmoke;
     border-top: 0px;
     border-right: 0px;
-    border-bottom:  0px; ;
-    font-size: 30px;
+    border-bottom:  0px;
+    
   
 }
 #navText{
-    padding-top: 10px;
-    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 30.8%;
+    width: 30%;
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 10px;
@@ -123,22 +126,11 @@ body{
 }
 
 #navCircle{
-    float: left;
+    
     width: 20%;
+    position: relative;
 }
 
-
-
-
-/* Dropdown Menue*/
-
-.dropdownMenue{
-    display: block;
-    margin-top: 100px;
-    width: 200px;
-    height: 100px;
-    background-color: whitesmoke;
-}
 
 
 /*Artikel*/
@@ -212,42 +204,25 @@ body{
     }
 
     #navText{
-        padding-top: 15px;
-        float: left;
-        text-align: center;
-        width: 30.8%;
+        letter-spacing: 5px;
+        width: 20%;
         font-size: 20px;
     }
 
+    #navCircle{
+        width: 110px;
+    }
+    
+
     #right{
-        padding-top: 15px;
-        float: right;
-        text-align: center;
-        width: 9%;
-        background-color: rgb(129, 40, 39);
-        box-sizing: border-box;
-        border: 3px solid whitesmoke;
-        border-top: 0px;
-        border-right: 0px;
-        border-bottom:  0px; ;
-        font-size: 20px;
-      
+    width: 15%;
+    
+ 
     }
 
     #left{
-        padding-top: 15px;
-        float: left;
-        text-align: center;
-        width: 9%;
-        box-sizing: border-box;
-        background-color: rgb(129, 40, 39);
-        border: 3px solid whitesmoke;
-        border-top: 0px;
-        border-left: 0px;
-        border-bottom:  0px; 
-        font-size: 20px;
-      
-    
+        width: 15%;
+       
     }
 
 
@@ -278,6 +253,17 @@ body{
         display: inline-block;
         width: 150;
         height: auto;
+    }
+
+    h1 {
+        padding-top: 100px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 10px;
+        text-align: center;
     }
 
 }
