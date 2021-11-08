@@ -1,46 +1,54 @@
-loginbox {
+.loginbox {
 	width: 300px;
 	height: 230px;
 	text-align: center;
-	background-color: red;
-	border-radius: 10px;
+	background-color: rgb(197, 97, 97);
+	border-radius: 20px;
 	position: absolute;
-	opacity: 0.5;
+	opacity: 0.7;
+	
 }
 .login {
-	position: absolute;
+	position:absolute;
+	margin-bottom: 150px;
+	font-size: 16px;
+	
 }
 .parent {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 200px;
+	margin: 200px;	
 }
 .regisbox1 {
-	width: 350px;
-	height: 310px;
+	width: 400px;
+	height: 350px;
 	text-align: center;
-	background-color: red;
-	border-radius: 10px;
+	background-color: rgb(197, 97, 97);
+	border-radius: 20px;
 	position: absolute;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 .regis1 {
 	position: absolute;
+	margin-bottom: 150px;
+	font-size: 16px;
 }
 
 .regisbox2 {
-	width: 350px;
-	height: 260px;
+	width: 400px;
+	height: 300px;
 	text-align: center;
-	background-color: red;
-	border-radius: 10px;
+	background-color: rgb(197, 97, 97);
+	border-radius: 20px;
 	position: absolute;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 .regis2 {
 	position: absolute;
+	margin-bottom: 150px;
+	font-size: 16px;
 }
 p{
 	display: inline;
