@@ -39,7 +39,6 @@
     width: 100%;
     height: auto !important;
     margin: 0 auto;
-    float: left;
     position: relative;
     display: inline-block;
     z-index: 1;
@@ -52,25 +51,40 @@
     float: left;
 }
 .dropPicture{
-    background-color: black;
-    width: 125%;
-    height: auto !important;
+    width: 80%;
+
+    
     margin: 0 auto;
     float: left;
+    overflow: visible;
+}
+
+.pictureContainer{
+    width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+    float: right;
 }
 
 .bookpicturesContainer:hover .dropPic{
-    width: 25%;
+    width: auto;
     height: auto;
     float: left;
     display: block;
 
 }
 .bookpicturesContainer:hover .bookpictures{
+    
     width: 125%;
 }
 
-
+.buttonMovePicture{
+    float: left;
+    background-color: rgb(129, 40, 39);
+    border-color: rgb(129, 40, 39);
+    height: 200px;
+    width: auto;
+}
 
 
 
@@ -148,8 +162,6 @@
     .bookpictures{
         width: 100%;
         height: auto !important;
-     
-        float: left;
         position: relative;
         display: inline-block;
     }
