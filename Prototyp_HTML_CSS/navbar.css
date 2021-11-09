@@ -150,7 +150,16 @@ body{
     }
    
     
-
+    h1 {
+        padding-top: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 10px;
+        text-align: center;
+    }
 
 }
 

@@ -1,19 +1,19 @@
 /*Artikel*/
 
 .artikelbild{
-    width: 100%;
+    width: 40%;
     position: absolute;
     float: left;
     
 }
 .artList{
-    margin-left: 110%;
+    margin-left: 50%;
     font-family: 'Montserrat', sans-serif;
     border-spacing: 0.5em 0.5em; 
 }
 
 .artikel{
-    width: auto;
+    width: 50%;
     position: absolute;
     z-index: 1;
     margin-top: 5%;
@@ -50,44 +50,45 @@
 }
 
 .koerper{
-    width: auto;
+    width: 60%;
     height: 400px;
     background-color: white;
     margin-bottom: 20px;
     opacity: 0.5;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 @media only screen and  (max-width: 900px) {
     .artList{
         margin-left: 0px;
         font-family: 'Montserrat', sans-serif;
-        border-spacing: 2em 0.2em; 
+        border-spacing: 0em 0.1em; 
         float: left;
         position: relative;
     }
 
     .artikelbild{
-        width: 75%;
+        width: 120%;
         position: relative;
-        
+        margin-bottom: 20px;;
         
     }
 
     .koerper{
-        width: 70%;
-        height: 580px;
-        margin-left: 15%;
-        margin-right: 15%;
+        width: 90%;
+        height: 600px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .artikel{
         margin-left: 20%;
+    
     }
 
     .preis{
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -101,7 +102,7 @@
     }
 
     .artikelbild{
-        width: 75%;
+        width: 120%;
         position: relative;
         
         
@@ -109,7 +110,7 @@
 
     .koerper{
         width: 90%;
-        height: 350px;
+        height: 60%;
         margin-left: 5%;
         margin-right: 5%;
     }
