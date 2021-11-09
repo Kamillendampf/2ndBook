@@ -1,6 +1,9 @@
 .koerper{
     display: inline-block !important;
-    
+   background-color: rgba(255, 255, 255, 0.6);
+   position: absolute;
+   z-index: 0;
+
     
 }
 
@@ -15,6 +18,12 @@
     text-align: center;
 }
 
+.layer{
+    position: absolut;
+    
+    z-index: 1;
+}
+
 .bookpicturesContainer{
     width: 20%;
     height: auto;
@@ -27,34 +36,43 @@
 
 
 .bookpictures{
-    width: 80%;
+    width: 100%;
     height: auto !important;
- 
+    margin: 0 auto;
     float: left;
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
 .dropPic{
+    
     display: none;
-    position: absolute;
-    z-index: 1;
+    position: block;
+    float: left;
+}
+.dropPicture{
+    background-color: black;
+    width: 125%;
+    height: auto !important;
+    margin: 0 auto;
     float: left;
 }
 
 .bookpicturesContainer:hover .dropPic{
     width: 25%;
     height: auto;
-   
     float: left;
     display: block;
 
 }
-
-.dropPicture{
-    background-color: black;
-   
+.bookpicturesContainer:hover .bookpictures{
+    width: 125%;
 }
+
+
+
+
 
 
 
@@ -63,18 +81,14 @@
    hyphens: auto;
    text-align: justify;
    text-align-last: justify;
-    margin-left: 1.5%;
+    margin: 0 auto;
     width: 66%;
     text-align: left;
     float: left;
-    color: white;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     text-align: center;
- 
-    background-color: rgb(129, 40, 39);
-    opacity: 0.5;
-    z-index: 2;
 }
 
 
@@ -87,7 +101,7 @@
 }
 
 .buybook{
-    margin-left: 1.5%;
+    margin: 0 auto;
     width: 10%;
     height: 70px;
     background-color:  rgb(129, 40, 39);
@@ -97,7 +111,6 @@
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     float: right;
-    margin-right: 1%;
 }
 
 .buybook:hover{
@@ -114,7 +127,17 @@
     .bookpicturesContainer{
         width: 100%;
         height: auto;
-        background-color: rgb(129, 40, 39);
+        
+        float: left;
+        position: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bookpicturesContainer:hover{
+        width: 100%!important;
+        height: auto;
+        
         float: left;
         position: flex;
         justify-content: center;
@@ -125,7 +148,7 @@
     .bookpictures{
         width: 100%;
         height: auto !important;
-        background-color: rgb(129, 40, 39);
+     
         float: left;
         position: relative;
         display: inline-block;
@@ -139,18 +162,10 @@
     }
     
     .bookpicturesContainer:hover .dropPic{
-        width: 100%;
-        height: auto;
-        background-color: rgb(129, 40, 39);
-        float: left;
-        display: block;
-    
+        display: none!important;
     }
     
-    .dropPicture{
-        background-color: black;
-       
-    }
+  
     
     
     
@@ -162,14 +177,12 @@
         width: 100%;
         text-align: left;
         float: left;
-        color: white;
+        color: black;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 1px;
         text-align: center;
         margin: 0 auto;
-        background-color: rgb(129, 40, 39);
-        opacity: 0.5;
-        z-index: 2;
+
     }
     
     
