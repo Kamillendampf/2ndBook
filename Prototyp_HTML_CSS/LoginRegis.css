@@ -1,17 +1,31 @@
 /*loginseite */
 .loginbox {	 /*Anmeldefenster Hintergrund(Box)*/
-	width: 100%;
+	width: 60%;
 	height: 500px;
+	margin-left: 20%;
+	margin-right: 20%;
 	background-color:  white;
 	border-radius: 20px;
-	position: absolute;
+	position:absolute;
 	opacity: 0.5;
+	margin-bottom: 50px;
+	margin-top: 30px;
 }
 
 .login { /*Inhalt Fenster*/
-	position:absolute;
-	margin-bottom: 200px;
+	position: absolute;
+	width: 60%;
 	font-size: 20px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: -10px;
+}
+
+.login p {
+	margin-top: 150px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .parent { /*übergreifendes div für alle 3 seiten */
 	position: relative;
@@ -123,6 +137,20 @@
 	margin-top: 250px;
  }
 
+ .box-3 {
+	background-color:rgb(197, 97, 97);
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	position: absolute;
+	width: 60%;
+	font-size: 20px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 150px;
+ }
+
  .box-2 {
 	background-color:rgb(197, 97, 97);
 	text-align: center;
@@ -134,7 +162,7 @@
 	font-size: 20px;
 	margin-left: 20%;
 	margin-right: 20%;
-	margin-top: 250px;
+	
  }
 
  .btn {
