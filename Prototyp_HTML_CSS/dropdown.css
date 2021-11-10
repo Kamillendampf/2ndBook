@@ -62,6 +62,8 @@ h2{
   }
 
 .sidenav{
+  z-index: 12;
+  position: relative;
   display: none;
   float: left;
   min-width: 200px;
@@ -82,6 +84,7 @@ h2{
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   width: 100%;
+  
 }
 
 
@@ -91,7 +94,7 @@ h2{
   width: 100%;
 }
 
-.show {display: block;}
+.show {display: block}
 
 .anders{
   margin-top: 50px;
@@ -130,6 +133,8 @@ h2{
 }
 
 .sidenavright{
+  z-index: 12;
+  position: relative;
   display: none;
   float: right;
     min-width: 150px;
@@ -171,6 +176,7 @@ h2{
   display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .suche{

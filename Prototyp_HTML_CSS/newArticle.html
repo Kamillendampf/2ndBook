@@ -14,7 +14,8 @@
         <!--
             Hier werden die benoetigten CSS Datein hinzugefuegt
         -->
-
+        <link rel="stylesheet" href="newArticle.css">
+        
         <!--
             Hier wird nichts daran geaendert (AUSSER IHR WOLLT MICH RICHITG ABFUCKEN!!!!)
         -->
@@ -24,6 +25,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
         
         <script src="dropdown.js"></script>
+      <script src="thumbnail.js"></script>
     </head>
     <body>
             <div class="navContainer">
@@ -86,8 +88,40 @@
                 -->
         
         <!--Hier weiteren Code eintragen-->
+        <div class="innerbody">
+        <div class="layer">
+        <form action="">
+            <table class="tabel">
+                <tr>
+                    <td><p class="text">Buchtitel:</p></td> <td><input type="text" name="Buchtitel" id="buchtitel" class="inputer"></td>
+                </tr>
+                <tr>
+                    <td><p class="text">Autor:</p></td> <td><input type="text" name="Autor" id="autor" class="inputer"></td>
+                </tr>
+                <tr>
+                    <td><p class="text">ISBN:</p></td> <td><input type="text" name="ISBN" id="isbn" class="inputer"></td>
+                </tr>
+                <tr>
+                    <td><p class="text">Preis:</p></td> <td><input type="text" name="Preis" id="preis" class="inputer"></td>
+                </tr>
+                <tr>
+                    <td><p class="text">Buchbilder:</p></td> <td> <input type="file" name="fileInput" accept="image/*" multiple onChange="fileThumbnail(this.files);"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" ><div id="thumbnail"></div></td>
+                   </tr>
+                <tr>
+                 <td colspan="2" class="buttonline"><input type="button" name="Preis" id="preis" class="button" value="Uploade"></td>
+                </tr>
+            </table>
 
-        
+
+
+        </form>
+
+        </div>
+
+        </div>
         
     </div>
           

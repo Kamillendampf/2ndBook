@@ -6,6 +6,7 @@ h1 {
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 10px;
+    
 }
 
 body{
@@ -38,6 +39,8 @@ body{
 
 /* Der Kreis fuer das logo*/
 .circle{
+    z-index:100;
+    position: relative;
     margin: 0 auto;
     width: 100px;
     height: 100px;
@@ -128,26 +131,6 @@ body{
 
 
 
-/*Artikel*/
-.koerper{
-     margin-top: 50px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     height: auto;
-     padding-left: 0px;
-     padding-top: 0px;                                                 
-     padding-right: 0px;
-     padding-bottom: 0px;
-     position: absolute;
-     z-index: -1;
- }
-
-
-
-
-
 /* Resposiver Teil */
 
 @media only screen and  (max-width: 900px) {
@@ -163,9 +146,20 @@ body{
         padding-top: 0px;                                                 
         padding-right: 0px;
         padding-bottom: 0px;
-    
-    }
 
+    }
+   
+    
+    h1 {
+        padding-top: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 10px;
+        text-align: center;
+    }
 
 }
 
@@ -209,22 +203,11 @@ body{
 
 
     /*Main-Part*/
-    .koerper{
-        margin-bottom: 25px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         width: 100%;
-         height: auto;
-         padding-left: 0px;
-         padding-top: 0px;                                                 
-         padding-right: 0px;
-         padding-bottom: 0px;
-     }
+   
     
     /* Solgen styling */
     h1 {
-        padding-top: 100px;
+        padding-top: 50px;
         color: white;
         display: flex;
         justify-content: center;
