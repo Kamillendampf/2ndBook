@@ -34,7 +34,7 @@
                         <div class="dropdown">
                             <button type="button" onclick="myFunction()"  class="icon-th-list"></button>
                             <div id="myDropdown" class="sidenav">
-                              <div class="suche"><input class="suchfeld" type="text" placeholder="ISBN:"></input><button class="icon-neuter"></button></div>
+                              <div class="suche"><form action=""><input class="suchfeld" type="text" placeholder="ISBN:"></input><button class="icon-neuter"></button></form></div>
                               <h2>Kategorie:</h2>
                               <a href="startseite.html">Informatik</a>
                               <a href="startseite.html">Psychologie</a>
@@ -42,13 +42,13 @@
                               <a href="startseite.html">Technik</a>
                               <a href="startseite.html">Maschinenbau</a>
                               <a href="startseite.html">Ingenieurwesen</a>
-                              <a href="startseite.html">Datenschutz</a>
-                              <a href="startseite.html">Impressum</a>
+                              <a href="datenschutz.html" class="anders">Datenschutz</a>
+                              <a href="impressum.html">Impressum</a>
                             </div>
                           </div>
                     </li>
                     <li class="navElement" id="navText"> 2nd</li>
-                    <li class="navElement" id="navCircle"> <div class="circle"><img class="circleLogo" src="../Assets/icons/logo_rund.png"></div></li>
+                    <li class="navElement" id="navCircle"> <div class="circle"><a href="startseite.html"><img class="circleLogo" src="../Assets/icons/logo_rund.png"></a></div></li>
                     <li class="navElement" id="navText"> Book</li>
                     
                     <li class="nav" id="right">
@@ -56,8 +56,10 @@
                             <button type="button" onclick="myFunctionright()"  class="icon-user"></button>
                             <div id="myDropdownright" class="sidenavright">
                               
-                              <a href="#">Mein Konto</a>
-                              <a href="#">Abmelden</a>
+                                <a href="kontodaten.html">Mein Konto</a>
+                                <a href="newArticle.html"> Artikel einstellen</a>
+                                <a href="meineArtikel.html"> Meine Artikel</a>
+                                <a href="startseite.html">Abmelden</a>
                             </div>
                           </div>
                     </li>
