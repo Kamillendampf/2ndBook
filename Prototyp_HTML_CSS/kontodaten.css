@@ -3,13 +3,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    margin-top: -50px;
+    margin-top: 50px;
 	font-family: 'Montserrat', sans-serif;
 
 }
 
 .box { /*Registrierungsfenster Hintergrund(Box) */
-	width: 100%;
+	max-width: 80%;
     align-items: center;
     text-align: center;
 	background-color: rgba(255, 255, 255, 0.5);
@@ -22,25 +22,11 @@
 }
 
 .table1 {
-    width: 100%;
+    width: 80%;
     align-items: center;
     opacity: 1 !important;
 }
-tr {
-    margin: 10px;
-}
-.td {
-    margin: 10px;
-}
-.ls {
-	width: 40%;
-}
-.rs {
-	width: 40%;
-}
-.tr {
-	width: auto;
-}
+
 input {
 	width: 35vh;
 	height: 4vh;
