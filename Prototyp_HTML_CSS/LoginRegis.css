@@ -53,35 +53,35 @@
 	font-size: 20px;
 	
 }
-
-.email {border-color: rgb(129, 40, 39);
+/* Textfelder */
+.email {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.passw {border-color:rgb(129, 40, 39) ;
+.passw {border-color:rgb(197, 97, 97);
 	font-size: 20px;
 	background-color: transparent;}
-.vorname {border-color: rgb(129, 40, 39);
+.vorname {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.nachname {border-color: rgb(129, 40, 39);
+.nachname {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.benutzername {border-color: rgb(129, 40, 39);
+.benutzername {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.straße {border-color: rgb(129, 40, 39);
+.straße {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.hausnr{border-color: rgb(129, 40, 39);
+.hausnr{border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.plz {border-color: rgb(129, 40, 39);
+.plz {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.ort {border-color: rgb(129, 40, 39);
+.ort {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color:transparent;}
-.handynummer {border-color: rgb(129, 40, 39);
+.handynummer {border-color: rgb(197, 97, 97);
 	font-size: 20px;
 	background-color: transparent;}
   
@@ -128,7 +128,7 @@
    border-top-style: solid;
    border-bottom-style: solid;
    border-top-color:black;
-   border-bottom-color: black,
+   border-bottom-color: black;
    transform: scale(0.1, 1);
  }
  .btn-one:hover span {
