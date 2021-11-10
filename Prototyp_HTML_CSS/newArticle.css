@@ -32,6 +32,9 @@
     box-shadow: 1% black;
     height: 30px;
     width: 100%;
+    border-color: rgb(197, 97, 97);
+    font-size: 20px;
+	background-color:transparent;
 }
 .tabel{
     margin: 0 auto;
