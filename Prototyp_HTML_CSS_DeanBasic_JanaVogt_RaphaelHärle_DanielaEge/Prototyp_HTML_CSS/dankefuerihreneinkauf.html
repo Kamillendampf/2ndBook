@@ -1,4 +1,5 @@
 <html>
+
     <head>
         <!--Bitte drin lassen-->
         <meta charset="UTF-8">                                                                                                      <!-- Festlegen des Verwendeten Zeichenvorrats -->
@@ -8,9 +9,9 @@
         <title>2ndBook</title>                                                                                                      <!-- Legt den Titel der Webseite fest -->
         <link rel="icon"  type="image/svg" href="../Assets/icons/logo_rund.png">                                                  <!-- Zeit Icon/Logo neben dem Titel an  -->
         <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
-        <link rel="stylesheet" href="dropdown.css">
         <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="startseite.css">
+        <link rel="stylesheet" href="dropdown.css">
+        <link rel="stylesheet" type="text/css" href="dankefuerihreneinkauf.css">
         <!--
             Hier werden die benoetigten CSS Datein hinzugefuegt
         -->
@@ -32,7 +33,7 @@
                         <div class="dropdown">
                             <button type="button" onclick="myFunction()"  class="icon-th-list"></button>
                             <div id="myDropdown" class="sidenav">
-                              <div class="suche"><form><input class="suchfeld" type="text" placeholder="ISBN:"></input><button class="icon-neuter"></button></form></div>
+                              <div class="suche"><input class="suchfeld" type="text" placeholder="ISBN:"></input><button class="icon-neuter"></button></div>
                               <h2>Kategorie:</h2>
                               <a href="startseite.html">Informatik</a>
                               <a href="startseite.html">Psychologie</a>
@@ -40,7 +41,7 @@
                               <a href="startseite.html">Technik</a>
                               <a href="startseite.html">Maschinenbau</a>
                               <a href="startseite.html">Ingenieurwesen</a>
-                              <a class="anders" href="startseite.html">Datenschutz</a>
+                              <a href="datenschutz.html" class="anders">Datenschutz</a>
                               <a href="impressum.html">Impressum</a>
                             </div>
                           </div>
@@ -53,7 +54,6 @@
                         <div class="dropdownright">
                             <button type="button" onclick="myFunctionright()"  class="icon-user"></button>
                             <div id="myDropdownright" class="sidenavright">
-                              
                                 <a href="kontodaten.html">Mein Konto</a>
                                 <a href="newArticle.html"> Artikel einstellen</a>
                                 <a href="meineArtikel.html"> Meine Artikel</a>
@@ -63,90 +63,59 @@
                     </li>
                 </ol>
             </div>
-
+           
+  
     <h1>Wissen aus zweiter Hand</h1>    
             
-    <div class="parent-koerper">
-        
-        <div class="koerper"> 
-            <div class="artikel">
-                <img src="../Assets/White_Logo.jpg"  class="artikelbild"></img>
-                <table class="artList">
-                    <tr><td class="buchtitel">Buchtitel</td></tr>
-                    <tr><td class="autor">Autor</td></tr>
-                    <tr><td class="isbn">ISBN</td></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr><td class="preis">Preis</td></tr>
-                    <tr><td class="preis"><button>Löschen</button></td></tr>
-                </table>
-            </div>
-        </div>
-        
-        
-        <div class="koerper"> 
-            <div class="artikel">
-                <img src="../Assets/White_Logo.jpg"  class="artikelbild"></img>
-                <table class="artList">
-                    <tr><td class="buchtitel">Buchtitel</td></tr>
-                    <tr><td class="autor">Autor</td></tr>
-                    <tr><td class="isbn">ISBN</td></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr><td class="preis">Preis</td></tr>
-                    <tr><td class="preis"><button>Löschen</button></td></tr>
-                </table>
+    
+    <div class="koerper">
+
+        <!--    *
+                *
+                *
+                    !!Viewport ist Deklariert!! -> fuer Responive Webseite
+                *
+                *
+                * -->
+
+                <!--
+                        Bearbeitungs regeln:
+                        1. Jede Seite bekommt eine Eigene CSS-Datei! (AUCH WENN IHR ANDERER MEINUNG SEIT!!!)
+                        2. Die layout.html wird lediglich kopiert, NICHT verwendet!
+                        3. Den HTML-Code koennt ihr an den dafuer vorgesehnen stellen eintragen. 
+
+                -->
+        <div class="parent">
+            <div class="box">
+                <div>Vielen Dank für Ihren Einkauf</div>
+                <br>
+                <div>Wir haben Ihre Bestellung entgegengenommen<br> und bearbeiten sie. </div>
+                <br>
+                <div>Vielen Dank, dass Sie sich für uns entschieden haben.</div>
+                <br>
+                <div>Wir freuen uns über Ihren Auftrag. </div>
+                <br>
+                <a href="startseite.html">Zurück zur Startseite</a>
+                <br>
+                <br>
             </div>
         </div>
 
-        
-        <div class="koerper"> 
-            <div class="artikel">
-                <img src="../Assets/White_Logo.jpg"  class="artikelbild"></img>
-                <table class="artList">
-                    <tr><td class="buchtitel">Buchtitel</td></tr>
-                    <tr><td class="autor">Autor</td></tr>
-                    <tr><td class="isbn">ISBN</td></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr><td class="preis">Preis</td></tr>
-                    <tr><td class="preis"><button>Löschen</button></td></tr>
-                </table>
-            </div>
-        </div>
 
-    </div>      
+
+
+
+        <!--Hier weiteren Code eintragen-->
+
+        
+        
+    </div>
+          
     
     </body>
     <footer>
         
     </footer>
     
+
 </html>
