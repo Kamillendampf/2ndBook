@@ -16,6 +16,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="LoginRegis.css">
         <script src="dropdown.js"></script>
+        
+        
     </head>
     <body>
             <div class="navContainer">
@@ -63,27 +65,27 @@
 					<div class="regisbox2">	<!-- ist nur die Box -->
 					</div>
 					<div class="regis2">
-					
+                        <form method="POST" action="index.html">  
 						<table class="table">
 							<h1>Jetzt Registrieren</h1>
 							<tr>
 								<td>Straße:</td> <td>Hausnummer:</td>
 								</tr>
 								<tr>
-								<td><input type="text" class="straße" /></td>
-								<td><input type="text" class="hausnr" /></td>	
+								<td><input type="text" name="strasse" id="strasse" class="straße" /></td>
+								<td><input type="text" name="hausnummer" id="hausnummer" class="hausnr" /></td>	
 							</tr>
 							<tr>
 								<td>Postleitzahl:</td><td>Ort:</td>
 								</tr>
 								<tr>
-								<td><input type="text" class="plz" /></td>
-								<td><input type="text" class="ort" /></td>	
+								<td><input type="text" name="plz" id="plz" class="plz" /></td>
+								<td><input type="text" name="ort" id="ort" class="ort" /></td>	
 							</tr>
 							<tr>
 								<td>Handynummer:</td>
 								</tr>
-								<td><input type="numb" class="handynummer" /></td>
+								<td><input type="numb" name="handynummer" id="handynummer" class="handynummer" /></td>
 							<tr>
 								<td></td>
 								</tr>
@@ -91,13 +93,15 @@
 							
 						</table>
                         <br>
-                        <a href="startseite.html">
-                        <div class="box-1">
-                            <div class="btn btn-one">
-                              <span>Jetzt registrieren!</span>
-                            </div>
-                          </div>
-						</a>
+                        <button type="submit" onclick="dataTransfer()">Submit</button>
+                        
+                    <div class="box-1">
+                        <div class="btn btn-one">
+                          <span> </span>
+                      </div>
+                    </a>
+                
+                    </form>
 					</div>
 				</div>
         <!--Hier weiteren Code eintragen-->
@@ -110,7 +114,7 @@
         
     </footer>
     
-
+    <script src="sendToServer.js"></script>
 </html>
 
 
