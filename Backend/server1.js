@@ -23,7 +23,7 @@ try {
     const bodyParser = require('body-parser');
     const morgan = require('morgan');
     const _ = require('lodash');
-
+    var session = require('express-session')
     helper.log('Creating and configuring Web Server...');
     const app = express();
     
@@ -48,6 +48,12 @@ try {
         next();
     });
     app.use(morgan('dev'));
+
+    app.use(session({
+        secret: 'secret',
+        resave: true,
+        saveUninitialized: true
+    }));
 
     // binding endpoints
     const TOPLEVELPATH = '/wba2api';

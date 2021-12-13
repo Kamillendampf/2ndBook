@@ -1,7 +1,10 @@
+
+
+
 /*loginseite */
 .loginbox {	 /*Anmeldefenster Hintergrund(Box)*/
 	width: 60%;
-	height: 500px;
+	height: 100%;
 	margin-left: 20%;
 	margin-right: 20%;
 	background-color:  white;
@@ -36,7 +39,7 @@
 /* registrierungsseite 1 */ 
 .regisbox1 { /*Registrierungsfenster Hintergrund(Box) */
 	width: 60%;
-	height: 500px;
+	height: 700px;
 	margin-left: 20%;
 	margin-right: 20%;
 	background-color:  white;
@@ -134,7 +137,7 @@
 	font-size: 20px;
 	margin-left: 20%;
 	margin-right: 20%;
-	margin-top: 250px;
+	margin-top: 400px;
  }
 
  .box-3 {
@@ -166,10 +169,13 @@
  }
 
  .btn {
+	font-family: 'Montserrat', sans-serif;
+   background-color:rgb(197, 97, 97);
+   font-size: 16px;
    line-height: 50px;
    height: 50px;
    text-align: center;
-   width: auto;
+   width: 100%;
    cursor: pointer;
  }
 
@@ -177,10 +183,6 @@
    color: black;
    transition: all 0.3s;
    position: relative;
- }
-
- .btn-one span {
-   transition: all 0.3s;
  }
 
  .btn-one::before {
@@ -201,7 +203,7 @@
    border-bottom-color: black;
    transform: scale(0.1, 1);
  }
- .btn-one:hover span {
+ .btn-one:hover {
    letter-spacing: 2px;
  }
  .btn-one:hover::before {

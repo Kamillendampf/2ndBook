@@ -14,9 +14,6 @@ class BenutzerDao {
     }
 
     loadById(id) {
-        const benutzerrolleDao = new BenutzerrolleDao(this._conn);
-        const personDao = new PersonDao(this._conn);
-
         var sql = 'SELECT * FROM Benutzer WHERE ID=?';
         var statement = this._conn.prepare(sql);
         var result = statement.get(id);
@@ -25,16 +22,6 @@ class BenutzerDao {
             throw new Error('No Record found by id=' + id);
 
         result = helper.objectKeysToLower(result);
-
-        result.benutzerrolle = benutzerrolleDao.loadById(result.benutzerrolleid);
-        delete result.benutzerrolleid;
-
-        if (helper.isNull(result.personid)) {
-            result.person = null;
-        } else {
-            result.person = personDao.loadById(result.personid);
-        }
-        delete result.personid;
 
         return result;
     }
@@ -102,13 +89,11 @@ class BenutzerDao {
         return false;
     }
 
-    hasaccess(benutzername, passwort) {
-        const benutzerrolleDao = new BenutzerrolleDao(this._conn);
-        const personDao = new PersonDao(this._conn);
+    hasaccess(email, passwort) {
 
-        var sql = 'SELECT ID FROM Benutzer WHERE Benutzername=? AND Passwort=?';
+        var sql = 'SELECT ID FROM Benutzer WHERE Email=? AND Passwort=?';
         var statement = this._conn.prepare(sql);
-        var params = [benutzername, md5(passwort)];
+        var params = [email, md5(passwort)];
         var result = statement.get(params);
 
         if (helper.isUndefined(result)) 
@@ -117,17 +102,15 @@ class BenutzerDao {
         return this.loadById(result.ID);
     }
 
-    create(benutzername = '', passwort = '', personid = null) {
-        var sql = 'INSERT INTO Benutzer (Benutzername,Passwort,PersonID) VALUES (?,?,?)';
+    create(benutzername = '', passwort = '', vorname='', nachname='', strasse='', hausnummer='', plz='', ort='', email='') {
+        var sql = 'INSERT INTO Benutzer (Benutzername,Passwort,Vorname,Nachname,Strasse,Hausnummer,Plz,Ort,Email) VALUES (?,?,?,?,?,?,?,?,?)';
         var statement = this._conn.prepare(sql);
-        var params = [benutzername, md5(passwort), personid];
+        var params = [benutzername, md5(passwort), vorname,nachname,strasse,hausnummer,plz,ort, email];
         var result = statement.run(params);
 
         if (result.changes != 1) 
             throw new Error('Could not insert new Record. Data: ' + params);
 
-        var newObj = this.loadById(result.lastInsertRowid);
-        return newObj;
     }
 
     update(id, benutzername = '', neuespasswort = null, personid = null) {

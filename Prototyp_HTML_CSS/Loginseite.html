@@ -56,26 +56,22 @@
 		<div class="loginbox"> </div>
 		<div class="login">
 		
-      <form action="">
+      <form method="POST">
         <table class="table">
           <h1>Anmelden</h1>
                 <tr>
                     <td>E-Mail Adresse:</td>
                     </tr>
-                    <td><input type="text" class="email" placeholder=""/></td>
+                    <td><input type="text" name='email' id='email' class="email" placeholder=""/></td>
                 <tr>
                     <td>Passwort:</td>
                     </tr>
-                    <td><input type="password" class="passw" /></td>
+                    <td><input type="password" name='passwort' id='passwort' class="passw" /></td>
                 
                 </table>
-                  <a href="startseite.html">
-                    <div class="box-3">
-                        <div class="btn btn-one">
-                          <span>Anmelden!</span>
-                        </div>
-                      </div>
-                    </a>
+                <div class="box-1">
+                  <button type ="submit" class="btn btn-one" onclick="login();return false">Anmelden</button>
+                </div>
           <br><br><br><br>
                 <p>Noch kein Account?</p>
                 <a href="Registrierungsseite1.html">
@@ -96,7 +92,7 @@
         
     </footer>
     
-
+    <script src="sendToServer.js"></script>
 </html>
 
 

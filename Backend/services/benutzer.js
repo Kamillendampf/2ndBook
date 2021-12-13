@@ -71,12 +71,13 @@ serviceRouter.get('/benutzer/eindeutig', function(request, response) {
     }
 });
 
-serviceRouter.get('/benutzer/zugang', function(request, response) {
+serviceRouter.post('/benutzer/zugang', function(request, response) {
     helper.log('Service Benutzer: Client requested check, if user has access');
+    helper.log(request.body);
 
     var errorMsgs=[];
-    if (helper.isUndefined(request.body.benutzername)) 
-        errorMsgs.push('benutzername fehlt');
+    if (helper.isUndefined(request.body.email)) 
+        errorMsgs.push('email fehlt');
     if (helper.isUndefined(request.body.passwort)) 
         errorMsgs.push('passwort fehlt');
 
@@ -88,13 +89,26 @@ serviceRouter.get('/benutzer/zugang', function(request, response) {
 
     const benutzerDao = new BenutzerDao(request.app.locals.dbConnection);
     try {
-        var result = benutzerDao.hasaccess(request.body.benutzername, request.body.passwort);
+        var result = benutzerDao.hasaccess(request.body.email, request.body.passwort);
         helper.log('Service Benutzer: Check if user has access, result=' + result);
         response.status(200).json(helper.jsonMsgOK(result));
+        request.session.loggedin = true;
     } catch (ex) {
         helper.logError('Service Benutzer: Error checking if user has access. Exception occured: ' + ex.message);
         response.status(400).json(helper.jsonMsgError(ex.message));
     }
+});
+
+serviceRouter.get('/benutzer/checklogin', function(request, response) {
+    
+	if (request.session.loggedin) {
+		helper.log('Welcome back, ' + request.session.loggedin + '!');
+        response.status(200).json(helper.jsonMsgOK());
+	} else {
+		helper.log('Please login to view this page!');
+        response.status(400).json(helper.jsonMsgError());
+	}
+	response.end();
 });
 
 serviceRouter.post('/benutzer', function(request, response) {
@@ -105,13 +119,21 @@ serviceRouter.post('/benutzer', function(request, response) {
         errorMsgs.push('benutzername fehlt');
     if (helper.isUndefined(request.body.passwort)) 
         errorMsgs.push('passwort fehlt');
-    if (helper.isUndefined(request.body.person)) {
+    if (helper.isUndefined(request.body.vorname)) {
         request.body.person = null;
-    } else if (helper.isUndefined(request.body.person.id)) {
-        errorMsgs.push('person gesetzt, aber id fehlt');
-    } else {
-        request.body.person = request.body.person.id;
-    }
+    }  if (helper.isUndefined(request.body.nachname)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.strasse)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.hausnummer)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.plz)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.ort)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.email)) {
+        request.body.person = null;
+    } 
     
     if (errorMsgs.length > 0) {
         helper.log('Service Benutzer: Creation not possible, data missing');
@@ -121,7 +143,7 @@ serviceRouter.post('/benutzer', function(request, response) {
 
     const benutzerDao = new BenutzerDao(request.app.locals.dbConnection);
     try {
-        var result = benutzerDao.create(request.body.benutzername, request.body.passwort, request.body.person);
+        var result = benutzerDao.create(request.body.benutzername, request.body.passwort, request.body.vorname, request.body.nachname, request.body.strasse, request.body.hausnummer, request.body.plz, request.body.ort, request.body.email);
         helper.log('Service Benutzer: Record inserted');
         response.status(200).json(helper.jsonMsgOK(result));
     } catch (ex) {

@@ -1,5 +1,6 @@
-<html>
+<html >
     <head>
+       
         <!--Bitte drin lassen-->
         <meta charset="UTF-8">                                                                                                      <!-- Festlegen des Verwendeten Zeichenvorrats -->
         <meta name="keywords" content="Book, Buch, B&uumlcher, verkaufen, Verkaufen, student, Student">                             <!-- Stichwoerter fuer Suchmacshiene -->
@@ -12,8 +13,8 @@
         <link rel="stylesheet" href="navbar.css">
         <link rel="stylesheet" href="startseite.css">
 
-        
-        <script src="db.js">
+        <script src="sendToServer.js"></script>
+       
            
         </script>
         <!--
@@ -29,7 +30,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
         <script src="dropdown.js"></script>
     </head>
-    <body>
+    <body onload="checkLogin()">
+        <p id="test"></p>
             <div class="navContainer">
                 <ol class="navList">
                     <li class="nav" id="left">
@@ -54,7 +56,7 @@
                     <li class="navElement" id="navText"> Book</li>
                     
                     <li class="nav" id="right">
-                        <a href="Loginseite.html" class="icon-login"></a>
+                        <a href="Loginseite.html" class="icon-login" id="login"></a>
                 </li>
                 </ol>
             </div>
