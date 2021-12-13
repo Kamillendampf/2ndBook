@@ -61,7 +61,7 @@ function dataTransfer(){
 
     var xhr =  new XMLHttpRequest(); // //brauchen wir um an den Server zu senden
     xhr.open("POST", host, false);  //wollen was an Server senden  mit POST Methode, weil wir was AN DEN SERVER schicken wollen 
-                                    // false = synchron (gleichzeitig) true = asynchron (nicht gleichzeitig). muss erst ein abarbeiten bevor es mit dem nächsten beginnt sonmst funktionuiertt es nicht richtig.
+  // false = synchron (gleichzeitig) true = asynchron (nicht gleichzeitig). muss erst ein abarbeiten bevor es mit dem nächsten beginnt sonmst funktionuiertt es nicht richtig.
     xhr.setRequestHeader("Content-Type", "application/json"); // wid angegeben dassd ich eine json datei sende
     xhr.send(json); //json datei wird gesendet //an localhost..8000
     setTimeout(function(){document.location.href = "Loginseite.html"},500); //will danach wieder zur Login seite weitergeleitet werden
@@ -92,8 +92,7 @@ var xhr =  new XMLHttpRequest();
 xhr.open("POST", host, false);  
 xhr.setRequestHeader("Content-Type", "application/json"); 
 xhr.send(json); 
-var status ) xhr.status; //Status ausgeben lassen 
-
+var status = xhr.status; //Status ausgeben lassen 
 if (status ==200){   //prüft ob der login erfolgreich war und mit server verbunden ist
     setTimeout(function(){document.location.href = "index.html"},500);
     }else{
