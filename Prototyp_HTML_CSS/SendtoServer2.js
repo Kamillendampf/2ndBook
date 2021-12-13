@@ -43,7 +43,8 @@ function dataTransfer(){
     else if  (passwort == ""){
         window.alert("Du musst ein Passwort angeben.");
     }
-    else data = {       // wenn alle Felder befüllt sind, wird Liste erstellt
+    else{ 
+        var data = {       // wenn alle Felder befüllt sind, wird Liste erstellt
         vorname: vorname,       //der erste Wert ist der KEY, zweiter die Variable die wir oben definiert haben.
         nachname: nachname,
         benutzername: benutzername,
@@ -63,11 +64,11 @@ function dataTransfer(){
                                     // false = synchron (gleichzeitig) true = asynchron (nicht gleichzeitig). muss erst ein abarbeiten bevor es mit dem nächsten beginnt sonmst funktionuiertt es nicht richtig.
     xhr.setRequestHeader("Content-Type", "application/json"); // wid angegeben dassd ich eine json datei sende
     xhr.send(json); //json datei wird gesendet //an localhost..8000
-    setTimeout(function(){document,location.href = "Loginseite.html"}500); //will danach wieder zur Login seite weitergeleitet werden
+    setTimeout(function(){document.location.href = "Loginseite.html"},500); //will danach wieder zur Login seite weitergeleitet werden
     }
 }
 
-funktion login(){
+function login(){
     const host ="http://localhost:8000/wba2api/benutzer";
     var email = document.querySelector("#email").value;
     var passwort = document.querySelector("#passwort").value;
@@ -78,10 +79,11 @@ if  (passwort == ""){
 else if (email == ""){
     window.alert("Du musst deine >email angeben.")
 }
-else data ={
+else{
+    var data ={
     email: email,
     passwort: passwort
-};
+    };
 
 var json = JSON.stringify(data);  
 
@@ -92,7 +94,7 @@ xhr.setRequestHeader("Content-Type", "application/json");
 xhr.send(json); 
 var status ) xhr.status; //Status ausgeben lassen 
 
-if(status ==200){   //prüft ob der login erfolgreich war und mit server verbunden ist
+if (status ==200){   //prüft ob der login erfolgreich war und mit server verbunden ist
     setTimeout(function(){document.location.href = "index.html"},500);
     }else{
         window.alert("Email oder Passwort ist falsch");
