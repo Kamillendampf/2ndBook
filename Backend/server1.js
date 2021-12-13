@@ -23,7 +23,7 @@ try {
     const bodyParser = require('body-parser');
     const morgan = require('morgan');
     const _ = require('lodash');
-    var session = require('express-session')
+    const session = require('express-session'); 
     helper.log('Creating and configuring Web Server...');
     const app = express();
     
@@ -49,11 +49,14 @@ try {
     });
     app.use(morgan('dev'));
 
-    app.use(session({
-        secret: 'secret',
-        resave: true,
-        saveUninitialized: true
-    }));
+    
+    app.use(session({secret: 'ssshhhhh'}));
+
+    app.use(bodyParser.json());      
+    app.use(bodyParser.urlencoded({extended: true}));
+    app.use(express.static(__dirname + '/views'));
+
+    var sess; // global session, NOT recommended
 
     // binding endpoints
     const TOPLEVELPATH = '/wba2api';
