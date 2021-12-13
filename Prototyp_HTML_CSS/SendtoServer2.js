@@ -69,18 +69,18 @@ function dataTransfer(){
 }
 
 function login(){
-    const host ="http://localhost:8000/wba2api/benutzer";
+    const host ="http://localhost:8000/wba2api//benutzer/zugang";
     var email = document.querySelector("#email").value;
     var passwort = document.querySelector("#passwort").value;
-}
+
 if  (passwort == ""){
     window.alert("Du musst dein Passwort angeben.");
 }
 else if (email == ""){
-    window.alert("Du musst deine >email angeben.")
+    window.alert("Du musst deine email angeben.")
 }
 else{
-    var data ={
+    var data = {
     email: email,
     passwort: passwort
     };
@@ -97,6 +97,7 @@ if (status ==200){   //prüft ob der login erfolgreich war und mit server verbun
     setTimeout(function(){document.location.href = "index.html"},500);
     }else{
         window.alert("Email oder Passwort ist falsch");
+    }
     }
 }
 
