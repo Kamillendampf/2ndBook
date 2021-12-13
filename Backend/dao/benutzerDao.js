@@ -102,10 +102,10 @@ class BenutzerDao {
         return this.loadById(result.ID);
     }
 
-    create(benutzername = '', passwort = '', vorname='', nachname='', strasse='', hausnummer='', plz='', ort='', email='') {
-        var sql = 'INSERT INTO Benutzer (Benutzername,Passwort,Vorname,Nachname,Strasse,Hausnummer,Plz,Ort,Email) VALUES (?,?,?,?,?,?,?,?,?)';
+    create(benutzername = '', passwort = '', vorname='', nachname='', strasse='', hausnummer='', plz='', ort='', email='', wallet='0') {
+        var sql = 'INSERT INTO Benutzer (Benutzername,Passwort,Vorname,Nachname,Strasse,Hausnummer,Plz,Ort,Email,Wallet) VALUES (?,?,?,?,?,?,?,?,?,?)';
         var statement = this._conn.prepare(sql);
-        var params = [benutzername, md5(passwort), vorname,nachname,strasse,hausnummer,plz,ort, email];
+        var params = [benutzername, md5(passwort), vorname,nachname,strasse,hausnummer,plz,ort, email, wallet];
         var result = statement.run(params);
 
         if (result.changes != 1) 

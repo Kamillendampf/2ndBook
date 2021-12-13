@@ -22,19 +22,19 @@ function dataTransfer(){
     }else if (ort == ""){
         window.alert("Du musst einen Ort  angeben.");
     }else if (vorname == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Vornamen  angeben.");
     }
     else if (nachname == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Nachnamen  angeben.");
     }
     else if (benutzername == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Benutzernamen  angeben.");
     }
     else if (passwort == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Passwort  angeben.");
     }
     else if (email == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Email  angeben.");
     }
     else{
         var data = {
