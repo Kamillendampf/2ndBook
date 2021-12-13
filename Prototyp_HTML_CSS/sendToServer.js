@@ -88,7 +88,7 @@ function login(){
     xhr.send(json);
     var status= xhr.status;
     if(status ==200){
-    setTimeout(function(){document.location.href = "index.html"},500);
+    setTimeout(function(){document.location.href = "startseite.html"},500);
     }else{
         window.alert("Email oder Passwort ist falsch");
     }
