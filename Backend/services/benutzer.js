@@ -91,8 +91,9 @@ serviceRouter.post('/benutzer/zugang', function(request, response) {
     try {
         var result = benutzerDao.hasaccess(request.body.email, request.body.passwort);
         helper.log('Service Benutzer: Check if user has access, result=' + result);
+       
         response.status(200).json(helper.jsonMsgOK(result));
-        request.session.loggedin = true;
+        
     } catch (ex) {
         helper.logError('Service Benutzer: Error checking if user has access. Exception occured: ' + ex.message);
         response.status(400).json(helper.jsonMsgError(ex.message));
@@ -100,15 +101,14 @@ serviceRouter.post('/benutzer/zugang', function(request, response) {
 });
 
 serviceRouter.get('/benutzer/checklogin', function(request, response) {
+    sess = request.session;
+    if(sess.email) {
+        return response.status(200);
+    }
+    else{
     
-	if (request.session.loggedin) {
-		helper.log('Welcome back, ' + request.session.loggedin + '!');
-        response.status(200).json(helper.jsonMsgOK());
-	} else {
-		helper.log('Please login to view this page!');
-        response.status(400).json(helper.jsonMsgError());
-	}
-	response.end();
+    return response.status(400);}
+
 });
 
 serviceRouter.post('/benutzer', function(request, response) {

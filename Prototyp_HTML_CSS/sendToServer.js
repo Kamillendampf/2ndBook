@@ -22,19 +22,19 @@ function dataTransfer(){
     }else if (ort == ""){
         window.alert("Du musst einen Ort  angeben.");
     }else if (vorname == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Vornamen  angeben.");
     }
     else if (nachname == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Nachnamen  angeben.");
     }
     else if (benutzername == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Benutzernamen  angeben.");
     }
     else if (passwort == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Passwort  angeben.");
     }
     else if (email == ""){
-        window.alert("Du musst einen Ort  angeben.");
+        window.alert("Du musst einen Email  angeben.");
     }
     else{
         var data = {
@@ -98,22 +98,14 @@ function login(){
 }
 
 function checkLogin(){
-
-    document.getElementById("test").innerText = "Yes. Onload Function started";
     var xhr = new XMLHttpRequest();
     const host = "http://localhost:8000/wba2api/benutzer/checklogin";
     xhr.open("GET", host);
     xhr.send();
     var status = xhr.status;
     console.log(status);
-
-    if (status==0){
-        document.querySelector("#right").style.display = "none";
-        setTimeout(function(){document.location.href = "index.html"},500);
+   
+    
+        document.location.href = "startseite.html";
+  
 }
-        
-    }
-
-
-
-
