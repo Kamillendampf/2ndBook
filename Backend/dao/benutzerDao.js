@@ -113,11 +113,9 @@ class BenutzerDao {
 
     }
 
-<<<<<<< HEAD
+
     update(id='', vorname = '', nachname = '', benutzername = '', email = '', strasse = '', hausnummer = '', plz = '', ort = '', passwort = '') {
-=======
-    update( vorname = '', nachname = '', benutzername = '', email = '', strasse = '', hausnummer = '', plz = '', ort = '', passwort = '', id=1 /*,personid = null*/) {
->>>>>>> 60f64a060ef1818cdf0971f7687aa68fdf11027b
+
         
         var sql = 'UPDATE Benutzer SET Vorname=?, Nachname=?, Benutzername=?, Email=?, Strasse=?, Hausnummer=?, Plz=?, Ort=?, Passwort=? WHERE ID=?';
         var statement = this._conn.prepare(sql);
