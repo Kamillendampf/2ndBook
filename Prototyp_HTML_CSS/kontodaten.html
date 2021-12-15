@@ -1,76 +1,87 @@
 <html>
 
-    <head>
-        <!--Bitte drin lassen-->
-        <meta charset="UTF-8">                                                                                                      <!-- Festlegen des Verwendeten Zeichenvorrats -->
-        <meta name="keywords" content="Book, Buch, B&uumlcher, verkaufen, Verkaufen, student, Student">                             <!-- Stichwoerter fuer Suchmacshiene -->
-        <meta name="description" content="Du bist Student? Denn Kaufe hier deine neuen Buecher oder verkaufe deine Altenbuecher.">  <!-- Webseiten beschreibung -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">                                                      <!-- Erzaeug ein Viewport, macht dass die Seite auf allen Geraeten identisch aussieht. -->
-        <title>2ndBook</title>                                                                                                      <!-- Legt den Titel der Webseite fest -->
-        <link rel="icon"  type="image/svg" href="../Assets/icons/logo_rund.png">                                                  <!-- Zeit Icon/Logo neben dem Titel an  -->
-        <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="dropdown.css">
-        <link rel="stylesheet" type="text/css" href="kontodaten.css">
-        <!--
+<head>
+    <!--Bitte drin lassen-->
+    <meta charset="UTF-8"> <!-- Festlegen des Verwendeten Zeichenvorrats -->
+    <meta name="keywords" content="Book, Buch, B&uumlcher, verkaufen, Verkaufen, student, Student">
+    <!-- Stichwoerter fuer Suchmacshiene -->
+    <meta name="description"
+        content="Du bist Student? Denn Kaufe hier deine neuen Buecher oder verkaufe deine Altenbuecher.">
+    <!-- Webseiten beschreibung -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Erzaeug ein Viewport, macht dass die Seite auf allen Geraeten identisch aussieht. -->
+    <title>2ndBook</title> <!-- Legt den Titel der Webseite fest -->
+    <link rel="icon" type="image/svg" href="../Assets/icons/logo_rund.png"> <!-- Zeit Icon/Logo neben dem Titel an  -->
+    <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" type="text/css" href="kontodaten.css">
+    <!--
             Hier werden die benoetigten CSS Datein hinzugefuegt
         -->
 
-        <!--
+    <!--
             Hier wird nichts daran geaendert (AUSSER IHR WOLLT MICH RICHITG ABFUCKEN!!!!)
         -->
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-        
-        <script src="dropdown.js"></script>
-    </head>
-    <body>
-            <div class="navContainer">
-                <ol class="navList">
-                    <li class="nav" id="left">
-                        <div class="dropdown">
-                            <button type="button" onclick="myFunction()"  class="icon-th-list"></button>
-                            <div id="myDropdown" class="sidenav">
-                              <div class="suche"><form action=""><input class="suchfeld" type="text" placeholder="ISBN:"></input><button class="icon-neuter"></button></form></div>
-                              <h2>Kategorie:</h2>
-                              <a href="startseite.html">Informatik</a>
-                              <a href="startseite.html">Psychologie</a>
-                              <a href="startseite.html">Medizin</a>
-                              <a href="startseite.html">Technik</a>
-                              <a href="startseite.html">Maschinenbau</a>
-                              <a href="startseite.html">Ingenieurwesen</a>
-                              <a href="datenschutz.html" class="anders">Datenschutz</a>
-                              <a href="impressum.html">Impressum</a>
-                            </div>
-                          </div>
-                    </li>
-                    <li class="navElement" id="navText"> 2nd</li>
-                    <li class="navElement" id="navCircle"> <div class="circle"><a href="startseite.html"><img class="cicrleLogo" src="../Assets/icons/logo_rund.png"></a></div></li>
-                    <li class="navElement" id="navText"> Book</li>
-                    
-                    <li class="nav" id="right">
-                        <div class="dropdownright">
-                            <button type="button" onclick="myFunctionright()"  class="icon-user"></button>
-                            <div id="myDropdownright" class="sidenavright">
-                                <a href="kontodaten.html">Mein Konto</a>
-                                <a href="newArticle.html"> Artikel einstellen</a>
-                                <a href="meineArtikel.html"> Meine Artikel</a>
-                                <a href="index.html">Abmelden</a>
-                            </div>
-                          </div>
-                    </li>
-                </ol>
-            </div>
-           
-  
-    <h1>Wissen aus zweiter Hand</h1>    
-            
-    
-    
 
-        <!--    *
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <script src="dropdown.js"></script>
+</head>
+
+<body>
+    <div class="navContainer">
+        <ol class="navList">
+            <li class="nav" id="left">
+                <div class="dropdown">
+                    <button type="button" onclick="myFunction()" class="icon-th-list"></button>
+                    <div id="myDropdown" class="sidenav">
+                        <div class="suche">
+                            <form action=""><input class="suchfeld" type="text" placeholder="ISBN:"></input><button
+                                    class="icon-neuter"></button></form>
+                        </div>
+                        <h2>Kategorie:</h2>
+                        <a href="startseite.html">Informatik</a>
+                        <a href="startseite.html">Psychologie</a>
+                        <a href="startseite.html">Medizin</a>
+                        <a href="startseite.html">Technik</a>
+                        <a href="startseite.html">Maschinenbau</a>
+                        <a href="startseite.html">Ingenieurwesen</a>
+                        <a href="datenschutz.html" class="anders">Datenschutz</a>
+                        <a href="impressum.html">Impressum</a>
+                    </div>
+                </div>
+            </li>
+            <li class="navElement" id="navText"> 2nd</li>
+            <li class="navElement" id="navCircle">
+                <div class="circle"><a href="startseite.html"><img class="cicrleLogo"
+                            src="../Assets/icons/logo_rund.png"></a></div>
+            </li>
+            <li class="navElement" id="navText"> Book</li>
+
+            <li class="nav" id="right">
+                <div class="dropdownright">
+                    <button type="button" onclick="myFunctionright()" class="icon-user"></button>
+                    <div id="myDropdownright" class="sidenavright">
+                        <a href="kontodaten.html">Mein Konto</a>
+                        <a href="newArticle.html"> Artikel einstellen</a>
+                        <a href="meineArtikel.html"> Meine Artikel</a>
+                        <a href="index.html">Abmelden</a>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+
+    <h1>Wissen aus zweiter Hand</h1>
+
+
+
+
+    <!--    *
                 *
                 *
                     !!Viewport ist Deklariert!! -> fuer Responive Webseite
@@ -78,16 +89,16 @@
                 *
                 * -->
 
-                <!--
+    <!--
                         Bearbeitungs regeln:
                         1. Jede Seite bekommt eine Eigene CSS-Datei! (AUCH WENN IHR ANDERER MEINUNG SEIT!!!)
                         2. Die layout.html wird lediglich kopiert, NICHT verwendet!
                         3. Den HTML-Code koennt ihr an den dafuer vorgesehnen stellen eintragen. 
 
                 -->
-        <div class="parent">
-            <div class="box">
-                <form id="form1">
+    <div class="parent">
+        <div class="box">
+            <form id="form1">
                 <table class="table1">
                     <tr>
                         <td class="ls">Vorname:</td>
@@ -182,29 +193,29 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="number" placeholder="000" class="wallet"/></td>
+                        <td class="ls"><input type="number" placeholder="000" class="wallet" /></td>
                         <td class="rs"><button class="name">Ändern</button></td>
                     </tr>
                 </table>
-                </form>
-            </div>
+            </form>
         </div>
+    </div>
 
 
 
 
 
-        <!--Hier weiteren Code eintragen-->
+    <!--Hier weiteren Code eintragen-->
 
-        
-        
- 
-          
-    
-    </body>
-    <footer>
-        
-    </footer>
-    
+
+
+
+
+
+</body>
+<footer>
+
+</footer>
+
 
 </html>

@@ -1,73 +1,84 @@
 <html>
 
-    <head>
-        <!--Bitte drin lassen-->
-        <meta charset="UTF-8">                                                                                                      <!-- Festlegen des Verwendeten Zeichenvorrats -->
-        <meta name="keywords" content="Book, Buch, B&uumlcher, verkaufen, Verkaufen, student, Student">                             <!-- Stichwoerter fuer Suchmacshiene -->
-        <meta name="description" content="Du bist Student? Denn Kaufe hier deine neuen Buecher oder verkaufe deine Altenbuecher.">  <!-- Webseiten beschreibung -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">                                                      <!-- Erzaeug ein Viewport, macht dass die Seite auf allen Geraeten identisch aussieht. -->
-        <title>2ndBook</title>                                                                                                      <!-- Legt den Titel der Webseite fest -->
-        <link rel="icon"  type="image/svg" href="../Assets/icons/logo_rund.png">                                                  <!-- Zeit Icon/Logo neben dem Titel an  -->
-        <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="dropdown.css">
-        <link rel="stylesheet" type="text/css" href="impressum.css">
-        <!--
+<head>
+    <!--Bitte drin lassen-->
+    <meta charset="UTF-8"> <!-- Festlegen des Verwendeten Zeichenvorrats -->
+    <meta name="keywords" content="Book, Buch, B&uumlcher, verkaufen, Verkaufen, student, Student">
+    <!-- Stichwoerter fuer Suchmacshiene -->
+    <meta name="description"
+        content="Du bist Student? Denn Kaufe hier deine neuen Buecher oder verkaufe deine Altenbuecher.">
+    <!-- Webseiten beschreibung -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Erzaeug ein Viewport, macht dass die Seite auf allen Geraeten identisch aussieht. -->
+    <title>2ndBook</title> <!-- Legt den Titel der Webseite fest -->
+    <link rel="icon" type="image/svg" href="../Assets/icons/logo_rund.png"> <!-- Zeit Icon/Logo neben dem Titel an  -->
+    <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" type="text/css" href="impressum.css">
+    <!--
             Hier werden die benoetigten CSS Datein hinzugefuegt
         -->
 
-        <!--
+    <!--
             Hier wird nichts daran geaendert (AUSSER IHR WOLLT MICH RICHITG ABFUCKEN!!!!)
         -->
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-        
-        <script src="dropdown.js"></script>
-    </head>
-    <body>
-            <div class="navContainer">
-                <ol class="navList">
-                    <li class="nav" id="left">
-                        <div class="dropdown">
-                            <button type="button" onclick="myFunction()"  class="icon-th-list"></button>
-                            <div id="myDropdown" class="sidenav">
-                              <div class="suche"><form action=""><input class="suchfeld" type="text" placeholder="ISBN:"></input><button class="icon-neuter"></button></form></div>
-                              <h2>Kategorie:</h2>
-                              <a href="startseite.html">Informatik</a>
-                              <a href="startseite.html">Psychologie</a>
-                              <a href="startseite.html">Medizin</a>
-                              <a href="startseite.html">Technik</a>
-                              <a href="startseite.html">Maschinenbau</a>
-                              <a href="startseite.html">Ingenieurwesen</a>
-                              <a href="datenschutz.html" class="anders">Datenschutz</a>
-                              <a href="impressum.html">Impressum</a>
-                            </div>
-                          </div>
-                    </li>
-                    <li class="navElement" id="navText"> 2nd</li>
-                    <li class="navElement" id="navCircle"> <div class="circle"><a href="startseite.html"><img class="cicrleLogo" src="../Assets/icons/logo_rund.png"></a></div></li>
-                    <li class="navElement" id="navText"> Book</li>
-                    
-                    <li class="nav" id="right">
-                        <div class="dropdownright">
-                            <button type="button" onclick="myFunctionright()"  class="icon-user"></button>
-                            <div id="myDropdownright" class="sidenavright">
-                                <a href="kontodaten.html">Mein Konto</a>
-                                <a href="newArticle.html"> Artikel einstellen</a>
-                                <a href="meineArtikel.html"> Meine Artikel</a>
-                                <a href="index.html">Abmelden</a>
-                            </div>
-                          </div>
-                    </li>
-                </ol>
-            </div>
-           
-  
-    <h1>Wissen aus zweiter Hand</h1>    
-            
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <script src="dropdown.js"></script>
+</head>
+
+<body>
+    <div class="navContainer">
+        <ol class="navList">
+            <li class="nav" id="left">
+                <div class="dropdown">
+                    <button type="button" onclick="myFunction()" class="icon-th-list"></button>
+                    <div id="myDropdown" class="sidenav">
+                        <div class="suche">
+                            <form action=""><input class="suchfeld" type="text" placeholder="ISBN:"></input><button
+                                    class="icon-neuter"></button></form>
+                        </div>
+                        <h2>Kategorie:</h2>
+                        <a href="startseite.html">Informatik</a>
+                        <a href="startseite.html">Psychologie</a>
+                        <a href="startseite.html">Medizin</a>
+                        <a href="startseite.html">Technik</a>
+                        <a href="startseite.html">Maschinenbau</a>
+                        <a href="startseite.html">Ingenieurwesen</a>
+                        <a href="datenschutz.html" class="anders">Datenschutz</a>
+                        <a href="impressum.html">Impressum</a>
+                    </div>
+                </div>
+            </li>
+            <li class="navElement" id="navText"> 2nd</li>
+            <li class="navElement" id="navCircle">
+                <div class="circle"><a href="startseite.html"><img class="cicrleLogo"
+                            src="../Assets/icons/logo_rund.png"></a></div>
+            </li>
+            <li class="navElement" id="navText"> Book</li>
+
+            <li class="nav" id="right">
+                <div class="dropdownright">
+                    <button type="button" onclick="myFunctionright()" class="icon-user"></button>
+                    <div id="myDropdownright" class="sidenavright">
+                        <a href="kontodaten.html">Mein Konto</a>
+                        <a href="newArticle.html"> Artikel einstellen</a>
+                        <a href="meineArtikel.html"> Meine Artikel</a>
+                        <a href="index.html">Abmelden</a>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+
+    <h1>Wissen aus zweiter Hand</h1>
+
+
     <div class="koerper">
 
         <!--    *
@@ -78,7 +89,7 @@
                 *
                 * -->
 
-                <!--
+        <!--
                         Bearbeitungs regeln:
                         1. Jede Seite bekommt eine Eigene CSS-Datei! (AUCH WENN IHR ANDERER MEINUNG SEIT!!!)
                         2. Die layout.html wird lediglich kopiert, NICHT verwendet!
@@ -93,7 +104,7 @@
                     <br>
                     Angaben gem. § 5 TMG:
                     <br>
-                    Firmenname: 2nd Book 
+                    Firmenname: 2nd Book
                     <br>
                     Adresse: Bitzer Steige 17
                     <br>
@@ -127,26 +138,59 @@
                     <u>Haftung für Inhalte</u>
                     <br>
                     <br>
-                    Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+                    Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen
+                    erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine
+                    Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen
+                    Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+                    Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu
+                    überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+                    Gesetzen bleiben hiervon unberührt.
                     <br>
-                    Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntniserlangung einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte unverzüglich entfernen.
+                    Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntniserlangung einer konkreten
+                    Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte
+                    unverzüglich entfernen.
                     <br>
                     <br>
                     <u>Haftungsbeschränkung für externe Links</u>
-                        
+
                     <br>
-                    Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder indirekt verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die „externen Links“ auch keine Gewähr auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind die jeweilige Anbieter oder Betreiber (Urheber) der Seiten verantwortlich.
+                    Unsere Webseite enthält Links auf externe Webseiten Dritter. Auf die Inhalte dieser direkt oder
+                    indirekt verlinkten Webseiten haben wir keinen Einfluss. Daher können wir für die „externen Links“
+                    auch keine Gewähr auf Richtigkeit der Inhalte übernehmen. Für die Inhalte der externen Links sind
+                    die jeweilige Anbieter oder Betreiber (Urheber) der Seiten verantwortlich.
                     <br>
-                    Die externen Links wurden zum Zeitpunkt der Linksetzung auf eventuelle Rechtsverstöße überprüft und waren im Zeitpunkt der Linksetzung frei von rechtswidrigen Inhalten. Eine ständige inhaltliche Überprüfung der externen Links ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht möglich. Bei direkten oder indirekten Verlinkungen auf die Webseiten Dritter, die außerhalb unseres Verantwortungsbereichs liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall nur bestehen, wenn wir von den Inhalten Kenntnis erlangen und es uns technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.
+                    Die externen Links wurden zum Zeitpunkt der Linksetzung auf eventuelle Rechtsverstöße überprüft und
+                    waren im Zeitpunkt der Linksetzung frei von rechtswidrigen Inhalten. Eine ständige inhaltliche
+                    Überprüfung der externen Links ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht möglich.
+                    Bei direkten oder indirekten Verlinkungen auf die Webseiten Dritter, die außerhalb unseres
+                    Verantwortungsbereichs liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall nur
+                    bestehen, wenn wir von den Inhalten Kenntnis erlangen und es uns technisch möglich und zumutbar
+                    wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.
                     <br>
-                    Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes „Name Ihrer Domain“ gesetzten Links und Verweise von Fragestellern, Blogeinträgern, Gästen des Diskussionsforums. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
+                    Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes „Name Ihrer
+                    Domain“ gesetzten Links und Verweise von Fragestellern, Blogeinträgern, Gästen des
+                    Diskussionsforums. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für
+                    Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten Informationen entstehen,
+                    haftet allein der Diensteanbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über
+                    Links auf die jeweilige Veröffentlichung lediglich verweist.
                     <br>
                     Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unverzüglich entfernt.
                     <br>
                     <br>
                     <u>Urheberrecht</u>
                     <br>
-                    Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen dem deutschen Urheberrecht (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf) . Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung des geistigen Eigentums in ideeller und materieller Sicht des Urhebers außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Urhebers i.S.d. Urhebergesetzes (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf ). Downloads und Kopien dieser Seite sind nur für den privaten und nicht kommerziellen Gebrauch erlaubt. Sind die Inhalte auf unserer Webseite nicht von uns erstellt wurden, sind die Urheberrechte Dritter zu beachten. Die Inhalte Dritter werden als solche kenntlich gemacht. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte unverzüglich entfernen.
+                    Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen dem deutschen Urheberrecht
+                    (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf) . Die Vervielfältigung, Bearbeitung,
+                    Verbreitung und jede Art der Verwertung des geistigen Eigentums in ideeller und materieller Sicht
+                    des Urhebers außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen
+                    Zustimmung des jeweiligen Urhebers i.S.d. Urhebergesetzes
+                    (http://www.gesetze-im-internet.de/bundesrecht/urhg/gesamt.pdf ). Downloads und Kopien dieser Seite
+                    sind nur für den privaten und nicht kommerziellen Gebrauch erlaubt. Sind die Inhalte auf unserer
+                    Webseite nicht von uns erstellt wurden, sind die Urheberrechte Dritter zu beachten. Die Inhalte
+                    Dritter werden als solche kenntlich gemacht. Sollten Sie trotzdem auf eine Urheberrechtsverletzung
+                    aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
+                    Rechtsverletzungen werden wir derartige Inhalte unverzüglich entfernen.
                     <br>
                 </div>
             </div>
@@ -158,15 +202,15 @@
 
         <!--Hier weiteren Code eintragen-->
 
-        
-        
+
+
     </div>
-          
-    
-    </body>
-    <footer>
-        
-    </footer>
-    
+
+
+</body>
+<footer>
+
+</footer>
+
 
 </html>
