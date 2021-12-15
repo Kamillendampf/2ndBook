@@ -98,22 +98,14 @@ function login(){
 }
 
 function checkLogin(){
-
-    document.getElementById("test").innerText = "Yes. Onload Function started";
     var xhr = new XMLHttpRequest();
     const host = "http://localhost:8000/wba2api/benutzer/checklogin";
     xhr.open("GET", host);
     xhr.send();
     var status = xhr.status;
     console.log(status);
-
-    if (status==0){
-        document.querySelector("#right").style.display = "none";
-        setTimeout(function(){document.location.href = "index.html"},500);
+   
+    
+        document.location.href = "startseite.html";
+  
 }
-        
-    }
-
-
-
-
