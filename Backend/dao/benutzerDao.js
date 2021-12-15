@@ -113,21 +113,17 @@ class BenutzerDao {
 
     }
 
-    update(id, benutzername = '', neuespasswort = null, personid = null) {
+    update( vorname = '', nachname = '', benutzername = '', email = '', strasse = '', hausnummer = '', plz = '', ort = '', passwort = '', id=1 /*,personid = null*/) {
         
-        if (helper.isNull(neuespasswort)) {
-            var sql = 'UPDATE Benutzer SET Benutzername=?,PersonID=? WHERE ID=?';
-            var statement = this._conn.prepare(sql);
-            var params = [benutzername, personid, id];
-        } else {
+        var sql = 'UPDATE Benutzer SET Vorname=?, Nachname=?, Benutzername=?, Email=?, Strasse=?, Hausnummer=?, Plz=?, Ort=?, Passwort=? WHERE ID=?';
+        var statement = this._conn.prepare(sql);
+        var params = [vorname, nachname, benutzername, email, strasse, hausnummer, plz, ort, md5(passwort), id];
+         /*else {
             var sql = 'UPDATE Benutzer SET Benutzername=?,Passwort=?,PersonID=? WHERE ID=?';
             var statement = this._conn.prepare(sql);
             var params = [benutzername, md5(neuespasswort), personid, id];
-        }
+        }*/
         var result = statement.run(params);
-
-        if (result.changes != 1) 
-            throw new Error('Could not update existing Record. Data: ' + params);
 
         var updatedObj = this.loadById(id);
         return updatedObj;

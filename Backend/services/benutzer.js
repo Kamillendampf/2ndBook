@@ -1,6 +1,7 @@
 const helper = require('../helper.js');
 const BenutzerDao = require('../dao/benutzerDao.js');
 const express = require('express');
+const { json } = require('express');
 var serviceRouter = express.Router();
 
 helper.log('- Service Benutzer');
@@ -156,7 +157,8 @@ serviceRouter.get('/benutzer', function(request, response) {
 
     var errorMsgs=[];
     if (helper.isUndefined(request.body.benutzername)) 
-        errorMsgs.push('benutzername fehlt');
+        errorMsgs.push(request.body.benutzername);
+        //errorMsgs.push('benutzername fehlt');
     if (helper.isUndefined(request.body.passwort)) 
         errorMsgs.push('passwort fehlt');
     if (helper.isUndefined(request.body.vorname)) {
@@ -194,7 +196,51 @@ serviceRouter.get('/benutzer', function(request, response) {
 
 serviceRouter.put('/benutzer', function(request, response) {
     helper.log('Service Benutzer: Client requested update of existing record');
+    var errorMsgs=[];
+    console.log(request.body.id);
+    if (helper.isUndefined(request.body.benutzername)) 
+        errorMsgs.push('benutzername fehlt');
+    if (helper.isUndefined(request.body.passwort)) 
+        errorMsgs.push('passwort fehlt');
+    if (helper.isUndefined(request.body.vorname)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.nachname)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.strasse)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.hausnummer)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.plz)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.ort)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.email)) {
+        request.body.person = null;
+    } else if (helper.isUndefined(request.body.person.id)) {
+        errorMsgs.push('person gesetzt, aber id fehlt');
+    } else {
+        request.body.person = request.body.person.id;
+    }
 
+    if (errorMsgs.length > 0) {
+        helper.log('Service Benutzer: Update not possible, data missing');
+        response.status(400).json(helper.jsonMsgError('Update nicht möglich. Fehlende Daten: ' + helper.concatArray(errorMsgs)));
+        return;
+    }
+
+    const benutzerDao = new BenutzerDao(request.app.locals.dbConnection);
+    try {
+        var result = benutzerDao.update(request.body.id, request.body.vorname, request.body.nachname, request.body.benutzername, request.body.email, request.body.strasse, request.body.hausnummer,  request.body.plz, request.body.ort, request.body.passwort );
+        helper.log('Service Benutzer: Record updated, id=' + request.body.id);
+        response.status(200).json(helper.jsonMsgOK(result));
+    } catch (ex) {
+        helper.logError('Service Benutzer: Error updating record by id. Exception occured: ' + ex.message);
+        response.status(400).json(helper.jsonMsgError(ex.message));
+    }    
+});
+
+/*serviceRouter.put('/benutzer', function(request, response) {
+    helper.log('Service Benutzer: Client requested update of existing record');
     var errorMsgs=[];
     if (helper.isUndefined(request.body.id)) 
         errorMsgs.push('id fehlt');
@@ -225,7 +271,7 @@ serviceRouter.put('/benutzer', function(request, response) {
         helper.logError('Service Benutzer: Error updating record by id. Exception occured: ' + ex.message);
         response.status(400).json(helper.jsonMsgError(ex.message));
     }    
-});
+});*/
 
 serviceRouter.delete('/benutzer/:id', function(request, response) {
     helper.log('Service Benutzer: Client requested deletion of record, id=' + request.params.id);

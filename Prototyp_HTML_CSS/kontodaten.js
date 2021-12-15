@@ -92,8 +92,8 @@ function test12345() {
 
 
 function test1() {
-    const host="http://localhost:8000/wba2api/Benutzer";
-   
+    const host="http://localhost:8000/wba2api/benutzer";
+    var id = 1;
     var vorname = document.getElementById("vorname").value;
     var nachname = document.getElementById("nachname").value;
     var benutzername = document.getElementById("benutzername").value;
@@ -105,8 +105,6 @@ function test1() {
     var passwort;// = document.getElementById("passwort").value;
     //document.getElementById("handynummer").value = hand
     var wallet = document.getElementById("wallet").value;
-    //xhr.open('PUT', host, false);
-    console.log(plz);
         //wird geprüft, ob ein Value vorhanden ist oder nicht. 
     if (vorname == ""){
         window.alert("Du musst deinen Vorname angeben."); //wenn das Feld Vorname nicht ausgefüllt ist, wird die Medung ausgegeben, dass ein Vorname eingegeben werden muss.
@@ -140,11 +138,11 @@ function test1() {
     }
     else{ 
         var data = {       // wenn alle Felder befüllt sind, wird Liste erstellt
+        id: id,
         vorname: vorname,       //der erste Wert ist der KEY, zweiter die Variable die wir oben definiert haben.
         nachname: nachname,
         benutzername: benutzername,
-        email: emailadresse,
-        handynummer: handynummer,
+        email: emailadresse,    
         strasse: strasse,
         hausnummer: hausnummer,
         plz: plz,
@@ -153,12 +151,15 @@ function test1() {
         
     };
     
-    var json = JSON.stringify(data);  //Liste wird umgewandelt in jason datei (strukturierte Datei)
-    console.log(json);
+    var text1 = JSON.stringify(data);  //Liste wird umgewandelt in jason datei (strukturierte Datei)
+    var json = JSON.parse(text1);
     var xhr =  new XMLHttpRequest(); // //brauchen wir um an den Server zu senden
-    xhr.open("PUT", host);  //wollen was an Server senden  mit POST Methode, weil wir was AN DEN SERVER schicken wollen     
-    xhr.send(json); //json datei wird gesendet //an localhost..8000
-    //xhr.onload = function () {
-    //};
+    xhr.open("PUT", host, false);  //wollen was an Server senden  mit POST Methode, weil wir was AN DEN SERVER schicken wollen   
+    xhr.setRequestHeader("Content-Type", "application/json");   
+    xhr.send(text1);  //json datei wird gesendet //an localhost..8000
+    console.log(json.id);
+    console.log(json.benutzername);
+    console.log("Harry Potter");
+    console.log(xhr.response);
 }
 }
