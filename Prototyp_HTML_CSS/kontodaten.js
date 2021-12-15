@@ -93,7 +93,11 @@ function test12345() {
 
 function test1() {
     const host="http://localhost:8000/wba2api/benutzer";
+<<<<<<< HEAD
     var id = "1";
+=======
+    var id = 1;
+>>>>>>> 60f64a060ef1818cdf0971f7687aa68fdf11027b
     var vorname = document.getElementById("vorname").value;
     var nachname = document.getElementById("nachname").value;
     var benutzername = document.getElementById("benutzername").value;
@@ -160,6 +164,10 @@ function test1() {
     console.log(json.id);
     console.log(json.benutzername);
     console.log("Harry Potter");
+<<<<<<< HEAD
     
+=======
+    console.log(xhr.response);
+>>>>>>> 60f64a060ef1818cdf0971f7687aa68fdf11027b
 }
 }

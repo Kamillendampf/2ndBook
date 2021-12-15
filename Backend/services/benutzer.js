@@ -197,6 +197,7 @@ serviceRouter.get('/benutzer', function(request, response) {
 serviceRouter.put('/benutzer', function(request, response) {
     helper.log('Service Benutzer: Client requested update of existing record');
     var errorMsgs=[];
+<<<<<<< HEAD
     if (helper.isUndefined(request.body.passwort)) 
         errorMsgs.push('passwort fehlt');
      if (helper.isUndefined(request.body.strasse)) {
@@ -207,6 +208,31 @@ serviceRouter.put('/benutzer', function(request, response) {
         errorMsgs.push('plz fehlt');
     }  if (helper.isUndefined(request.body.ort)) {
         errorMsgs.push('passwort fehlt');
+=======
+    console.log(request.body.id);
+    if (helper.isUndefined(request.body.benutzername)) 
+        errorMsgs.push('benutzername fehlt');
+    if (helper.isUndefined(request.body.passwort)) 
+        errorMsgs.push('passwort fehlt');
+    if (helper.isUndefined(request.body.vorname)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.nachname)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.strasse)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.hausnummer)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.plz)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.ort)) {
+        request.body.person = null;
+    }  if (helper.isUndefined(request.body.email)) {
+        request.body.person = null;
+    } else if (helper.isUndefined(request.body.person.id)) {
+        errorMsgs.push('person gesetzt, aber id fehlt');
+    } else {
+        request.body.person = request.body.person.id;
+>>>>>>> 60f64a060ef1818cdf0971f7687aa68fdf11027b
     }
 
     if (errorMsgs.length > 0) {
