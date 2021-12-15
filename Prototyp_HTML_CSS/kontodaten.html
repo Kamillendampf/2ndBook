@@ -26,7 +26,7 @@
         
         <script src="dropdown.js"></script>
     </head>
-    <body>
+    <body onload="test12345()">
             <div class="navContainer">
                 <ol class="navList">
                     <li class="nav" id="left">
@@ -94,7 +94,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Vorname" class="vorname" /></td>
+                        <td class="ls"><input type="text" placeholder="Vorname" class="vorname" id="vorname"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -102,7 +102,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Nachname" class="nachname" /></td>
+                        <td class="ls"><input type="text" placeholder="Nachname" class="nachname" id="nachname"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -110,7 +110,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Benutzername" class="benutzername" /></td>
+                        <td class="ls"><input type="text" placeholder="Benutzername" class="benutzername" id="benutzername"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -118,7 +118,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="emailadresse" class="emailadresse" /></td>
+                        <td class="ls"><input type="text" placeholder="emailadresse" class="emailadresse" id="emailadresse"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -126,7 +126,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Musterstraße" class="straße" name="Straße" id="street"/></td>
+                        <td class="ls"><input type="text" placeholder="Musterstraße" class="strasse" name="strasse" id="strasse"/></td>
                         <td class="rs"><button class="name" onclick="getdata()">Ändern</button></td>
                     </tr>
                     <tr>
@@ -134,7 +134,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="88" class="hausnummer" /></td>
+                        <td class="ls"><input type="text" placeholder="10" class="hausnummer" id="hausnummer"/></td>
                         <td class="rs"><button class="name" onclick="test1234()">Ändern</button></td>
                     </tr>
                     <tr>
@@ -142,7 +142,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="88888" class="plz" /></td>
+                        <td class="ls"><input type="text" placeholder="66666" class="plz" id="plz"/></td>
                         <td class="rs"><button class="name" onclick="test12345()">Ändern</button></td>
                     </tr>
                     <tr>
@@ -150,15 +150,15 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Musterstadt" class="stadt" /></td>
-                        <td class="rs"><button class="name">Ändern</button></td>
+                        <td class="ls"><input type="text" placeholder="Musterstadt" class="stadt" id="stadt"/></td>
+                        <td class="rs"><button class="name" onclick="test1()">Ändern</button></td>
                     </tr>
                     <tr>
                         <td class="ls">Handynummer:</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="0172/1234452" class="handynummer" /></td>
+                        <td class="ls"><input type="text" placeholder="0172/1234452" class="handynummer" id="handynummer"/></td>
                         <td class="rs"><button class="name">Ändern</button></td>
                     </tr>
                     <tr>
@@ -166,7 +166,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="password" placeholder="Type in your Password" class="asdf" /></td>
+                        <td class="ls"><input type="password" placeholder="Type in your Password" class="asdf" id="password"/></td>
                         <td class="rs"><button class="name">Ändern</button></td>
                     </tr>
                     <tr>
@@ -182,7 +182,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="number" placeholder="000" class="wallet"/></td>
+                        <td class="ls"><input type="number" placeholder="000" class="wallet" id="wallet"/></td>
                         <td class="rs"><button class="name">Ändern</button></td>
                     </tr>
                 </table>
