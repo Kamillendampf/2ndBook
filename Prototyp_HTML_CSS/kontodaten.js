@@ -162,10 +162,6 @@ function test1() {
     console.log(json.id);
     console.log(json.benutzername);
     console.log("Harry Potter");
-<<<<<<< HEAD
-    
-=======
-    console.log(xhr.response);
->>>>>>> 60f64a060ef1818cdf0971f7687aa68fdf11027b
+
 }
 }
