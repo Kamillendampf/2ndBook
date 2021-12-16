@@ -59,11 +59,22 @@ function getJSONSessionItem(label) {
     // otherwise return as string
     return val;
 }
+// check if given string is a json string
+function isJSONString(str) {
+    return tryParseJSONString(str) != false;
+}
+function tryParseJSONString(str) {
+    try {
+        var obj = JSON.parse(str);
+        if (obj && typeof obj === "object")
+            return obj;
+    } catch (e) { }
+    return false;
+}
 
 function test12345() {
     var u = getJSONSessionItem("id");
-    console.log(u);
-    const host="http://localhost:8000/wba2api/Benutzer/gib/"+u.id;
+    const host="http://localhost:8000/wba2api/Benutzer/gib/"+u;
     var id;
     var benutzername;
     var passwort;
@@ -102,6 +113,7 @@ function test12345() {
         
 
     };
+
     xhr.send(null);
     //einzelne Html-Felder ansprechen
     document.getElementById("vorname").value = vorname;
@@ -118,11 +130,8 @@ function test12345() {
 
 
 function test1() {
-    var u = getJSONSessionItem("id");
+    var id = getJSONSessionItem("id");
     const host="http://localhost:8000/wba2api/benutzer";
-
-    var id = u.id;
-
     var vorname = document.getElementById("vorname").value;
     var nachname = document.getElementById("nachname").value;
     var benutzername = document.getElementById("benutzername").value;
@@ -190,6 +199,7 @@ function test1() {
     console.log(json.benutzername);
     console.log("Harry Potter");
 
+}
 }
 
 function datainsert() {
