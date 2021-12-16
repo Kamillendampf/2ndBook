@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="dropdown.css">
-    <link rel="stylesheet" type="text/css" href="dankefuerihreneinkauf.css">
     <!--
             Hier werden die benoetigten CSS Datein hinzugefuegt
         -->
-
+    <link rel="stylesheet" href="articlecart.css">
     <!--
             Hier wird nichts daran geaendert (AUSSER IHR WOLLT MICH RICHITG ABFUCKEN!!!!)
         -->
@@ -29,11 +28,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
     <script src="dropdown.js"></script>
+    <script src="sendToServer.js"></script>
 
     <script>
         function isNullOrUndefined(val) {
             return val === null || val === undefined;
         }
+
 
         function getSessionItem(label) {
             return localStorage.getItem(label);
@@ -49,11 +50,11 @@
             var result = existsSessionItem("id");
 
             if (result) {
-
-                window.location.href = "dankefuerihreneinkauf.html";
+                console.log("replace startseite");
+                window.location.href = "articlecart.html";
             } else {
-
-                window.location.href = "Loginseite.html";
+                console.log("replace index");
+                window.location.href = "articlecartabgemeldet.html";
             }
         }
 
@@ -90,24 +91,16 @@
             <li class="navElement" id="navText"> Book</li>
 
             <li class="nav" id="right">
-                <div class="dropdownright">
-                    <button type="button" onclick="myFunctionright()" class="icon-user"></button>
-                    <div id="myDropdownright" class="sidenavright">
-                        <a href="kontodaten.html">Mein Konto</a>
-                        <a href="newArticle.html"> Artikel einstellen</a>
-                        <a href="meineArtikel.html"> Meine Artikel</a>
-                        <a href="index.html">Abmelden</a>
-                    </div>
-                </div>
+                <a href="Loginseite.html" class="icon-login" id="login"></a>
             </li>
         </ol>
     </div>
 
 
-    <h1>Wissen aus zweiter Hand</h1>
+    <h1 class="booktitle"> Die Besten Fladenbrote der Welt</h1>
 
 
-    <div class="koerper">
+    <div class="koerper" ">
 
         <!--    *
                 *
@@ -117,44 +110,58 @@
                 *
                 * -->
 
-        <!--
+                <!--
                         Bearbeitungs regeln:
                         1. Jede Seite bekommt eine Eigene CSS-Datei! (AUCH WENN IHR ANDERER MEINUNG SEIT!!!)
                         2. Die layout.html wird lediglich kopiert, NICHT verwendet!
                         3. Den HTML-Code koennt ihr an den dafuer vorgesehnen stellen eintragen. 
 
                 -->
-        <div class="parent">
-            <div class="box">
-                <div>Vielen Dank für Ihren Einkauf</div>
-                <br>
-                <div>Wir haben Ihre Bestellung entgegengenommen<br> und bearbeiten sie. </div>
-                <br>
-                <div>Vielen Dank, dass Sie sich für uns entschieden haben.</div>
-                <br>
-                <div>Wir freuen uns über Ihren Auftrag. </div>
-                <br>
-                <a href="startseite.html">Zurück zur Startseite</a>
-                <br>
-                <br>
-            </div>
-        </div>
-
-
-
+        
 
 
         <!--Hier weiteren Code eintragen-->
+
+        
+        
+        <div class=" layer1">
+        <div class="bookpicturesContainer">
+
+            <img class="bookpictures" src="../Assets/Logo_Final_png.png">
+            <div class="dropPic">
+                <div class="pictureContainer"><button class="buttonMovePicture" onclick=""> </button><img
+                        class="dropPicture" src="../Assets/Logo_Final_png.png"><button class="buttonMovePicture"
+                        onclick=""> > </button></div>
+            </div>
+        </div>
+
+        <div class="bookdescription">
+            <p class="zustand" style="float: right; background-color: brown;"> 27€ </p>
+            <p class="text"> Buch " Die besten Fladenbrote der Welt" dreht sich um die besten Fladenbrote.
+                Warum ein Backbuch? Weil ich kein programmier Buch hab. hier steht noch merh text. Warum wird dieser
+                Text nicht über die ganze zeile expandiert?
+            </p>
+            <p class="zustand"> Buch zustand: Gebraucht </p>
+            <p class="zustand" style="float: right;"> ISBN: 123456789 </p>
+        </div>
+
+        <form action="">
+
+            <a href="dankefuerihreneinkauf.html" class="buybook">Kaufen</a>
+        </form>
+    </div>
+
+
+
+
 
 
 
     </div>
 
+    <footer>
 
-</body>
-<footer>
-
-</footer>
+    </footer>
 
 
 </html>

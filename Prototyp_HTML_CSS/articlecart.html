@@ -28,6 +28,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
     <script src="dropdown.js"></script>
+    <script src="sendToServer.js"></script>
+
+    <script>
+        function isNullOrUndefined(val) {
+            return val === null || val === undefined;
+        }
+
+
+        function getSessionItem(label) {
+            return localStorage.getItem(label);
+        }
+
+        function existsSessionItem(label) {
+            return !isNullOrUndefined(getSessionItem(label));
+        }
+
+
+        function checkLogin() {
+            console.log(existsSessionItem("id"));
+            var result = existsSessionItem("id");
+
+            if (result) {
+                console.log("replace startseite");
+                window.location.href = "articlecart.html";
+            } else {
+                console.log("replace index");
+                window.location.href = "articlecartabgemeldet.html";
+            }
+        }
+
+        checkLogin();
+    </script>
 </head>
 
 <body>
