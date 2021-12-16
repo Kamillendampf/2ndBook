@@ -36,8 +36,33 @@ function test1234() {
     console.log("harry Potter");
     alert(namex);
 }
+
+function getSessionItem(label) {
+    return localStorage.getItem(label);
+}
+// function checks if given value is null or undefined
+function isNullOrUndefined(val) {
+    return val === null || val === undefined;
+}
+function getJSONSessionItem(label) {
+    var val = getSessionItem(label);
+
+    // if undefined (not existent), return undefined
+    if (isNullOrUndefined(val))
+        return val;
+
+    // if json string, convert and return as json object
+    if (isJSONString(val))
+        return tryParseJSONString(val);
+
+    // otherwise return as string
+    return val;
+}
+
 function test12345() {
-    const host="http://localhost:8000/wba2api/Benutzer/gib/1";
+    var u = getJSONSessionItem("id");
+    console.log(u);
+    const host="http://localhost:8000/wba2api/Benutzer/gib/"+u.id;
     var id;
     var benutzername;
     var passwort;
@@ -92,9 +117,10 @@ function test12345() {
 
 
 function test1() {
+    var u = getJSONSessionItem("id");
     const host="http://localhost:8000/wba2api/benutzer";
 
-    var id = "1";
+    var id = u.id;
 
     var vorname = document.getElementById("vorname").value;
     var nachname = document.getElementById("nachname").value;
