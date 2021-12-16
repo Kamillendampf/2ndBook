@@ -4,7 +4,7 @@
 /*loginseite */
 .loginbox {	 /*Anmeldefenster Hintergrund(Box)*/
 	width: 60%;
-	height: 100%;
+	height: 500px;
 	margin-left: 20%;
 	margin-right: 20%;
 	background-color:  white;
@@ -13,6 +13,9 @@
 	opacity: 0.5;
 	margin-bottom: 50px;
 	margin-top: 30px;
+	
+	
+	
 }
 
 .login { /*Inhalt Fenster*/
@@ -22,6 +25,7 @@
 	margin-left: 20%;
 	margin-right: 20%;
 	margin-top: -10px;
+
 }
 
 .login p {
@@ -387,17 +391,5 @@ a {
 
 	}
 
-	.box-1 {
-		background-color:rgb(197, 97, 97);
-		text-align: center;
-		font-size: 16px;
-		font-family: 'Montserrat', sans-serif;
-		position: absolute;
-		position: absolute;
-		width: 60%;
-		font-size: 20px;
-		margin-left: 20%;
-		margin-right: 20%;
-		margin-top: 280px;
-	 }
+
     }

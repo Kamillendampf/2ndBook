@@ -1,4 +1,5 @@
 
+
 function getdata(){
     const host = "http://localhost:8000/wba2api/Benutzer";
     document.getElementById("street").placeholder="";
@@ -190,4 +191,9 @@ function test1() {
     console.log("Harry Potter");
 
 }
+
+function datainsert() {
+    const host = "http://localhost:8000/wba2api/benutzer";
+    var straße = document.getElementsByName("Straße");
+    straße.datainsert = "TestStraße";
 }
