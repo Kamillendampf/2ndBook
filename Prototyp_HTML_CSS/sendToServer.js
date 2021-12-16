@@ -80,7 +80,6 @@ function login() {
         };
 
         var json = JSON.stringify(data);
-        var id;
         var xhr = new XMLHttpRequest();
 
         xhr.open("POST", host, false);
@@ -91,11 +90,11 @@ function login() {
             var user = xhr.response;
             var user1 = JSON.parse(user);
             //Daten in variablen sichern
-            id = user1.daten.id;
-
+            var id = user1.daten.id;
+            setSessionItem("id", id);
         };
 
-        setSessionItem("id", id);
+        
         xhr.send(json);
         var status = xhr.status;
         if (status == 200) {
