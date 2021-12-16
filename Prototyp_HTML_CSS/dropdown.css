@@ -94,6 +94,24 @@ h2{
   width: 100%;
 }
 
+.sidenavright button {
+  padding: 6px 8px 6px 0px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  width: 100%;
+  background-color:  rgb(129, 40, 39);
+  border: none;
+  text-align: left;
+  
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavright button:hover {
+  background-color: rgb(197, 97, 97);
+  width: 100%;
+}
+
 .show {display: block}
 
 .anders{
