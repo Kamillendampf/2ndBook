@@ -23,6 +23,7 @@
     <!--
             Hier wird nichts daran geaendert (AUSSER IHR WOLLT MICH RICHITG ABFUCKEN!!!!)
         -->
+<<<<<<< HEAD
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,6 +83,60 @@
 
 
     <!--    *
+=======
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+        
+        <script src="dropdown.js"></script>
+    </head>
+    <body onload="test12345()">
+            <div class="navContainer">
+                <ol class="navList">
+                    <li class="nav" id="left">
+                        <div class="dropdown">
+                            <button type="button" onclick="myFunction()"  class="icon-th-list"></button>
+                            <div id="myDropdown" class="sidenav">
+                              <div class="suche"><form action=""><input class="suchfeld" type="text" placeholder="ISBN:"></input><button class="icon-neuter"></button></form></div>
+                              <h2>Kategorie:</h2>
+                              <a href="startseite.html">Informatik</a>
+                              <a href="startseite.html">Psychologie</a>
+                              <a href="startseite.html">Medizin</a>
+                              <a href="startseite.html">Technik</a>
+                              <a href="startseite.html">Maschinenbau</a>
+                              <a href="startseite.html">Ingenieurwesen</a>
+                              <a href="datenschutz.html" class="anders">Datenschutz</a>
+                              <a href="impressum.html">Impressum</a>
+                            </div>
+                          </div>
+                    </li>
+                    <li class="navElement" id="navText"> 2nd</li>
+                    <li class="navElement" id="navCircle"> <div class="circle"><a href="startseite.html"><img class="cicrleLogo" src="../Assets/icons/logo_rund.png"></a></div></li>
+                    <li class="navElement" id="navText"> Book</li>
+                    
+                    <li class="nav" id="right">
+                        <div class="dropdownright">
+                            <button type="button" onclick="myFunctionright()"  class="icon-user"></button>
+                            <div id="myDropdownright" class="sidenavright">
+                                <a href="kontodaten.html">Mein Konto</a>
+                                <a href="newArticle.html"> Artikel einstellen</a>
+                                <a href="meineArtikel.html"> Meine Artikel</a>
+                                <a href="index.html">Abmelden</a>
+                            </div>
+                          </div>
+                    </li>
+                </ol>
+            </div>
+           
+  
+    <h1>Wissen aus zweiter Hand</h1>    
+            
+    
+    
+
+        <!--    *
+>>>>>>> main
                 *
                 *
                     !!Viewport ist Deklariert!! -> fuer Responive Webseite
@@ -105,7 +160,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Vorname" class="vorname" /></td>
+                        <td class="ls"><input type="text" placeholder="Vorname" class="vorname" id="vorname"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -113,7 +168,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Nachname" class="nachname" /></td>
+                        <td class="ls"><input type="text" placeholder="Nachname" class="nachname" id="nachname"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -121,7 +176,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Benutzername" class="benutzername" /></td>
+                        <td class="ls"><input type="text" placeholder="Benutzername" class="benutzername" id="benutzername"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -129,7 +184,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="emailadresse" class="emailadresse" /></td>
+                        <td class="ls"><input type="text" placeholder="emailadresse" class="emailadresse" id="emailadresse"/></td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
@@ -137,39 +192,44 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Musterstraße" class="straße" /></td>
-                        <td class="rs"><button class="name">Ändern</button></td>
+<<<<<<< HEAD
+                        <td class="ls"><input type="text" placeholder="Musterstraße" class="strasse" name="strasse" id="strasse"/></td>
+                        <td class="rs"><button class="name" onclick="getdata()">Ändern</button></td>
+=======
+                        <td class="ls"><input type="text" placeholder="Musterstraße" class="straße" name="Straße"/></td>
+                        <td class="rs"><button class="name" onclick="datainsert()">Ändern</button></td>
+>>>>>>> 18dcef951e16b70ecc08437b15ea8f45df414666
                     </tr>
                     <tr>
                         <td class="ls">Hausnummer:</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="88" class="hausnummer" /></td>
-                        <td class="rs"><button class="name">Ändern</button></td>
+                        <td class="ls"><input type="text" placeholder="10" class="hausnummer" id="hausnummer"/></td>
+                        <td class="rs"><button class="name" onclick="test1234()">Ändern</button></td>
                     </tr>
                     <tr>
                         <td class="ls">PLZ:</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="88888" class="plz" /></td>
-                        <td class="rs"><button class="name">Ändern</button></td>
+                        <td class="ls"><input type="text" placeholder="66666" class="plz" id="plz"/></td>
+                        <td class="rs"><button class="name" onclick="test12345()">Ändern</button></td>
                     </tr>
                     <tr>
                         <td class="ls">Ort:</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="Musterstadt" class="stadt" /></td>
-                        <td class="rs"><button class="name">Ändern</button></td>
+                        <td class="ls"><input type="text" placeholder="Musterstadt" class="stadt" id="stadt"/></td>
+                        <td class="rs"><button class="name" onclick="test1()">Ändern</button></td>
                     </tr>
                     <tr>
                         <td class="ls">Handynummer:</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="text" placeholder="0172/1234452" class="handynummer" /></td>
+                        <td class="ls"><input type="text" placeholder="0172/1234452" class="handynummer" id="handynummer"/></td>
                         <td class="rs"><button class="name">Ändern</button></td>
                     </tr>
                     <tr>
@@ -177,7 +237,7 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td class="ls"><input type="password" placeholder="Type in your Password" class="asdf" /></td>
+                        <td class="ls"><input type="password" placeholder="Type in your Password" class="asdf" id="password"/></td>
                         <td class="rs"><button class="name">Ändern</button></td>
                     </tr>
                     <tr>
@@ -193,7 +253,11 @@
                         <td class="rs"></td>
                     </tr>
                     <tr>
+<<<<<<< HEAD
                         <td class="ls"><input type="number" placeholder="000" class="wallet" /></td>
+=======
+                        <td class="ls"><input type="number" placeholder="000" class="wallet" id="wallet"/></td>
+>>>>>>> main
                         <td class="rs"><button class="name">Ändern</button></td>
                     </tr>
                 </table>
@@ -217,5 +281,24 @@
 
 </footer>
 
+<<<<<<< HEAD
+=======
+        
+        
+ 
+          
+    
+    </body>
+    <footer>
+        
+    </footer>
+<<<<<<< HEAD
+    
+    <script src="kontodaten.js"></script>
+=======
+    <script src="kontodaten.js">
+    </script>
+>>>>>>> main
 
+>>>>>>> 18dcef951e16b70ecc08437b15ea8f45df414666
 </html>
