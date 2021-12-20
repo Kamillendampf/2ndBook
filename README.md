@@ -19,3 +19,5 @@ akutalisieren/ muss auch vor arbeitsstart eingegeben werden damit alle Dateine a
 # Uebersicht von veraenderten daten:
 Um zu sehen welche Daten auf dem lokalen Rechner veraendert wurden oder welche zum pushen vorbereitet weuden oder welche nachrichten noch ein Kommit benoetigen.
 	git status
+
+# Test kann ich pullen?
