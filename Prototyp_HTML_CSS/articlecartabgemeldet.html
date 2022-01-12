@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <!--Bitte drin lassen-->
+    <meta charset="UTF-8"> <!-- Festlegen des Verwendeten Zeichenvorrats -->
+    <meta name="keywords" content="Book, Buch, B&uumlcher, verkaufen, Verkaufen, student, Student">
+    <!-- Stichwoerter fuer Suchmacshiene -->
+    <meta name="description"
+        content="Du bist Student? Denn Kaufe hier deine neuen Buecher oder verkaufe deine Altenbuecher.">
+    <!-- Webseiten beschreibung -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Erzaeug ein Viewport, macht dass die Seite auf allen Geraeten identisch aussieht. -->
+    <title>2ndBook</title> <!-- Legt den Titel der Webseite fest -->
+    <link rel="icon" type="image/svg" href="../Assets/icons/logo_rund.png"> <!-- Zeit Icon/Logo neben dem Titel an  -->
+    <link rel="stylesheet" href="../Assets/icons/icons/css/icons-font.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <!--
+            Hier werden die benoetigten CSS Datein hinzugefuegt
+        -->
+    <link rel="stylesheet" href="articlecart.css">
+    <!--
+            Hier wird nichts daran geaendert (AUSSER IHR WOLLT MICH RICHITG ABFUCKEN!!!!)
+        -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <script src="dropdown.js"></script>
+    <script src="sendToServer.js"></script>
+
+    <script>
+        function isNullOrUndefined(val) {
+            return val === null || val === undefined;
+        }
+
+
+        function getSessionItem(label) {
+            return localStorage.getItem(label);
+        }
+
+        function existsSessionItem(label) {
+            return !isNullOrUndefined(getSessionItem(label));
+        }
+
+
+        function checkLogin() {
+            console.log(existsSessionItem("id"));
+            var result = existsSessionItem("id");
+
+            if (result) {
+                console.log("replace startseite");
+                window.location.href = "articlecart.html";
+            } else {
+                console.log("replace index");
+                window.location.href = "articlecartabgemeldet.html";
+            }
+        }
+
+        checkLogin();
+    </script>
+</head>
+
+<body>
+    <div class="navContainer">
+        <ol class="navList">
+            <li class="nav" id="left">
+                <div class="dropdown">
+                    <button type="button" onclick="myFunction()" class="icon-th-list"></button>
+                    <div id="myDropdown" class="sidenav">
+                        <div class="suche"><input class="suchfeld" type="text" placeholder="ISBN:"></input><button
+                                class="icon-neuter"></button></div>
+                        <h2>Kategorie:</h2>
+                        <a href="startseite.html">Informatik</a>
+                        <a href="startseite.html">Psychologie</a>
+                        <a href="startseite.html">Medizin</a>
+                        <a href="startseite.html">Technik</a>
+                        <a href="startseite.html">Maschinenbau</a>
+                        <a href="startseite.html">Ingenieurwesen</a>
+                        <a href="datenschutz.html" class="anders">Datenschutz</a>
+                        <a href="impressum.html">Impressum</a>
+                    </div>
+                </div>
+            </li>
+            <li class="navElement" id="navText"> 2nd</li>
+            <li class="navElement" id="navCircle">
+                <div class="circle"><a href="startseite.html"><img class="cicrleLogo"
+                            src="../Assets/icons/logo_rund.png"></a></div>
+            </li>
+            <li class="navElement" id="navText"> Book</li>
+
+            <li class="nav" id="right">
+                <a href="Loginseite.html" class="icon-login" id="login"></a>
+            </li>
+        </ol>
+    </div>
+
+
+    <h1 class="booktitle"> Die Besten Fladenbrote der Welt</h1>
+
+
+    <div class="koerper" ">
+
+        <!--    *
+                *
+                *
+                    !!Viewport ist Deklariert!! -> fuer Responive Webseite
+                *
+                *
+                * -->
+
+                <!--
+                        Bearbeitungs regeln:
+                        1. Jede Seite bekommt eine Eigene CSS-Datei! (AUCH WENN IHR ANDERER MEINUNG SEIT!!!)
+                        2. Die layout.html wird lediglich kopiert, NICHT verwendet!
+                        3. Den HTML-Code koennt ihr an den dafuer vorgesehnen stellen eintragen. 
+
+                -->
+        
+
+
+        <!--Hier weiteren Code eintragen-->
+
+        
+        
+        <div class=" layer1">
+        <div class="bookpicturesContainer">
+
+            <img class="bookpictures" src="../Assets/Logo_Final_png.png">
+            <div class="dropPic">
+                <div class="pictureContainer"><button class="buttonMovePicture" onclick=""> </button><img
+                        class="dropPicture" src="../Assets/Logo_Final_png.png"><button class="buttonMovePicture"
+                        onclick=""> > </button></div>
+            </div>
+        </div>
+
+        <div class="bookdescription">
+            <p class="zustand" style="float: right; background-color: brown;"> 27€ </p>
+            <p class="text"> Buch " Die besten Fladenbrote der Welt" dreht sich um die besten Fladenbrote.
+                Warum ein Backbuch? Weil ich kein programmier Buch hab. hier steht noch merh text. Warum wird dieser
+                Text nicht über die ganze zeile expandiert?
+            </p>
+            <p class="zustand"> Buch zustand: Gebraucht </p>
+            <p class="zustand" style="float: right;"> ISBN: 123456789 </p>
+        </div>
+
+        <form action="">
+
+            <a href="dankefuerihreneinkauf.html" class="buybook">Kaufen</a>
+        </form>
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+
+</html>
