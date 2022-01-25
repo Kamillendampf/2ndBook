@@ -43,7 +43,7 @@
 /* registrierungsseite 1 */ 
 .regisbox1 { /*Registrierungsfenster Hintergrund(Box) */
 	width: 60%;
-	height: 700px;
+	height: 600px;
 	margin-left: 20%;
 	margin-right: 20%;
 	background-color:  white;
@@ -141,7 +141,7 @@
 	font-size: 20px;
 	margin-left: 20%;
 	margin-right: 20%;
-	margin-top: 160px;
+	margin-top: 180px;
  }
 
  .box-3 {
@@ -390,6 +390,6 @@ a {
 			background-color: transparent;}
 
 	}
-
+	
 
     }
