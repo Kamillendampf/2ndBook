@@ -78,11 +78,11 @@ class BenutzerDao {
         return false;
     }
 
-    isunique(benutzername) {
-        var sql = 'SELECT COUNT(ID) AS cnt FROM Benutzer WHERE Benutzername=?';
+    isunique(email) {
+        var sql = 'SELECT COUNT(ID) AS cnt FROM Benutzer WHERE Email=?';
         var statement = this._conn.prepare(sql);
-        var result = statement.get(benutzername);
-
+        var result = statement.get(email);
+        
         if (result.cnt == 0) 
             return true;
 

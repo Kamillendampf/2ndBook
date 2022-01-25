@@ -1,5 +1,8 @@
+
+
 function dataTransfer() {
     const host = "http://localhost:8000/wba2api/benutzer";
+    const host2 = "http://localhost:8000/wba2api/benutzer/eindeutig";
     var strasse = document.querySelector("#strasse").value;
     var hausnummer = document.querySelector("#hausnummer").value;
     var plz = document.querySelector("#plz").value;
@@ -9,6 +12,7 @@ function dataTransfer() {
     var benutzername = document.querySelector("#benutzername").value;
     var email = document.querySelector("#email").value;
     var passwort = document.querySelector("#passwort").value;
+    var passwortw = document.querySelector("#passwortw").value;
 
 
     if (strasse == "") {
@@ -34,6 +38,8 @@ function dataTransfer() {
     }
     else if (email == "") {
         window.alert("Du musst einen Email  angeben.");
+    }else if (passwort!=passwortw){
+        window.alert("Dein Passwort muss übereinstimmen");
     }
     else {
         var data = {
@@ -51,13 +57,26 @@ function dataTransfer() {
         var json = JSON.stringify(data);
 
         var xhr = new XMLHttpRequest();
+        xhr.open("GET", host2, false);
+        var result;
+        xhr.onload = function () {
+            result=xhr.response;var 
+            result1=JSON.parse(result);
+            if (result1.fehler==true){
+                window.alert("Du bist mit dieser Email schon registriert")
+            }else{
+                result = true;
+            }
+        };
+        
         xhr.open("POST", host, false);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(json);
-        setTimeout(function () { document.location.href = "Loginseite.html" }, 500);
+        setTimeout(function () { document.location.href = "Loginseite.html" }, 500);}
+        
     }
 
-}
+
 
 function login() {
 

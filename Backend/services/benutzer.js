@@ -52,7 +52,7 @@ serviceRouter.get('/benutzer/eindeutig', function(request, response) {
     helper.log('Service Benutzer: Client requested check, if username is unique');
 
     var errorMsgs=[];
-    if (helper.isUndefined(request.body.benutzername)) 
+    if (helper.isUndefined(request.body.email)) 
         errorMsgs.push('benutzername fehlt');
 
     if (errorMsgs.length > 0) {
@@ -63,9 +63,10 @@ serviceRouter.get('/benutzer/eindeutig', function(request, response) {
 
     const benutzerDao = new BenutzerDao(request.app.locals.dbConnection);
     try {
-        var result = benutzerDao.isunique(request.body.benutzername);
+        var result = benutzerDao.isunique(request.body.email);
+        helper.log(result);
         helper.log('Service Benutzer: Check if unique, result=' + result);
-        response.status(200).json(helper.jsonMsgOK({ 'benutzername': request.body.benutzername, 'eindeutig': result }));
+        response.status(200).json(helper.jsonMsgOK({ 'email': request.body.email, 'eindeutig': result }));
     } catch (ex) {
         helper.logError('Service Benutzer: Error checking if unique. Exception occured: ' + ex.message);
         response.status(400).json(helper.jsonMsgError(ex.message));
